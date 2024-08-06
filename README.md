@@ -4,8 +4,8 @@ Here we provide all the example programs and codes for our book "[Programming wi
 
 ## 1. Structure
 
-1. A [Very First Project](./tree/main/veryFirstProject)
-2. [Variables](./tree/main/variables)
+1. A [Very First Project](../../tree/main/veryFirstProject)
+2. [Variables](../..tree/main/variables)
 
 ## 2. License
 Copyright (C) 2023-2024 [Thomas Weise](http://iao.hfuu.edu.cn/5) (汤卫思教授)
