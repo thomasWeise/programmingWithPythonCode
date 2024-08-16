@@ -23,7 +23,7 @@ mypyVersion="$(grep Version: <<< "$mypyInfos")"
 mypyVersion="$(sed -n 's/.*Version:\s*\([.0-9]*\)/\1/p' <<< "$mypyVersion")"
 
 # We print the mypy version and we will show the command line which is executed.
-echo "\$ mypy $2 --no-strict-optional --check-untyped-defs 2>&1"
+echo "\$ mypy $2 --no-strict-optional --check-untyped-defs"
 
 # Now we enter the folder.
 cd "$1"
