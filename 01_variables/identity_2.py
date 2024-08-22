@@ -9,6 +9,7 @@ print(f"Are 'a' and 'c' the same object: {a is c}")
 d: str = "Hello"
 d = d + " World!"
 print(f"Are 'a' and 'd' the same object: {a is d}")
+print(f"Are 'a' and 'd' equal objects: {a == d}")
 
 e: int = 10
 mul: int = 5
@@ -18,3 +19,4 @@ print(f"Are 'e' and 'f' the same object: {e is f}")
 g: int = 1_000_000_000_000_000_000
 h: int = (g * mul) // mul
 print(f"Are 'g' and 'h' the same object: {g is h}")
+print(f"Are 'g' and 'h' equal objects: {g == h}")
