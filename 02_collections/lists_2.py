@@ -17,7 +17,7 @@ print(f"The sorted numbers are: {numbers}.")  # Print the list.
 numbers.reverse()  # Reverse the order of the list elements.
 print(f"The reversed numbers are: {numbers}.")  # And print the list.
 
-cpy: list[int] = numbers.copy()  # Create a copy of the list.
+cpy: list[int] = list(numbers)  # Create a copy of the list `numbers`.
 print(f"cpy == numbers: {cpy == numbers}.")  # Indeed, `cpy == numbers`.
 print(f"cpy is numbers: {cpy is numbers}.")  # No, `cpy is not numbers`.
 
