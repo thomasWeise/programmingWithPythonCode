@@ -12,7 +12,7 @@ print(f"The vegetables are: {vegetables}.")  # Print the list.
 food: list[str] = []  # Create an empty list.
 food.extend(fruits)  # Append all elements of `fruits` to `food`.
 food.extend(vegetables)  # Append all elements of `vegetables` to `food`.
-print(f"Fruit and vegetables: {food}")  # Print the new list.
+print(f"Fruits and vegetables: {food}")  # Print the new list.
 print(f"len(food) = {len(food)}")  # Print the length of list `food`.
 print(f"food[0] = {food[0]}")  # Print the first element of `food`.
 print(f"food[1] = {food[1]}")  # Print the second element of `food`.
