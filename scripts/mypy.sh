@@ -4,7 +4,7 @@
 # It prints the mypy command and the results of mypy.
 # It always exits with an exit code 0, even if mypy fails.
 # Argument $1: the folder to run it in
-# Argument $2: the parameter to mypy
+# Argument $2: the file(s) to scan
 
 # We enforce strict error handling, i.e., fail on any unexpected error.
 set -o pipefail  # trace errors through pipes
