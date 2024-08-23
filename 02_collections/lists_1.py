@@ -1,7 +1,7 @@
 """An example for creating, indexing, and printing lists."""
 
 fruits: list[str] = ["apple", "pear", "orange"]  # Create List.
-print(f"There are {len(fruits)} fruits: {fruits}")  # Print length and list.
+print(f"We got {len(fruits)} fruits: {fruits}")  # Print length and list.
 
 fruits.append("cherry")  # Append one element at the end of a list.
 print(f"There now are {len(fruits)} fruits: {fruits}")
