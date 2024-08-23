@@ -24,14 +24,15 @@ fi
 mypyVer="$(grep Version: <<< "$mypyInfos")"
 mypyVer="$(sed -n 's/.*Version:\s*\([.0-9]*\)/\1/p' <<< "$mypyVer")"
 
-# We print the command line which will be executed.
-echo "\$ mypy $2 --no-strict-optional --check-untyped-defs"
+# Construct the mypy command.
+mypyCmd="mypy $2 --no-strict-optional --check-untyped-defs"
 
+echo "\$ $mypyCmd"  # We print the command line which will be executed.
 cd "$1"  # We enter the folder inside of which we should execute mypy.
 
 # Switch of "exit-on-error", run mypy, and afterwards switch it back on.
 set +o errexit  # Turn off exit-on-error.
-mypy $2 --no-strict-optional --check-untyped-defs --no-color-output 2>&1
+$mypyCmd 2>&1
 exitCode="$?"  # Store exit code of program in variable exitCode.
 set -o errexit  # Turn exit-on-error back on.
 

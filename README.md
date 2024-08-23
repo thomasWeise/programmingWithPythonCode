@@ -6,6 +6,8 @@ Here we provide all the example programs and codes for our book "[Programming wi
 
 1. A [Very First Project](../../tree/main/00_veryFirstProject)
 2. [Variables](../..tree/main/01_variables)
+3. [Collections](../..tree/main/02_collections)
+4. [Scripts](../..tree/main/scripts)
 
 ## 2. License
 Copyright (C) 2023-2024 [Thomas Weise](http://iao.hfuu.edu.cn/5) (汤卫思教授)
