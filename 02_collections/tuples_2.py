@@ -7,7 +7,7 @@ other: tuple[str, int, float] = ("pear", 1, 1.2)  # second such tuple
 print(f"the other tuple: {other}.")  # print  it as well
 
 tuples: list[tuple[str, int, float]] = [  # create a list of 4 tuples
-    mixed, ("pear", -2, 4.5), other, ("pear", -2, 3.3), ]
+    mixed, ("pear", -2, 4.5), other, ("pear", -2, 3.3)]
 print(f"tuples list: {tuples}.")  # print that list
 
 tuples.sort()  # sort the list
