@@ -14,10 +14,10 @@ print(f"l5 = l4[2:-2] == {l5}")  # [7, 5, 6, 7, 5]
 l6: list[int] = l4[1::2]  # start at index 1, take every 2nd element
 print(f"l6 = l4[1::2] == {l6}")  # [6, 5, 7, 6]
 
-# Start copying l4 at last element, move backwards take every 3rd
-# element, and stop right before index=2.
-l7: list[int] = l4[-1:2:-3]
-print(f"l7 = l4[-1:2:-3] == {l7}")  # [7, 7]
+# Start copying l4 at last element, move backwards take every 2nd
+# element, and stop right before index=3.
+l7: list[int] = l4[-1:3:-2]
+print(f"l7 = l4[-1:3:-2] == {l7}")  # [7, 5, 6]
 
 a, b, c = l2  # store the three elements of l2 into variables
 print(f"a={a}, b={b}, c={c}")  # a=5, b=6, c=7
