@@ -15,3 +15,6 @@ print(f"sorted tuples list: {tuples}.")
 
 a, b, c = mixed  # we unpack the tuple
 print(f"a={a}, b={b}, c={c}")
+
+mixed = "x", 4, 4.5
+print(f"mixed is now: {mixed}")
