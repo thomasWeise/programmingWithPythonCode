@@ -19,5 +19,8 @@ print(f"l6 = l4[1::2] == {l6}")  # [6, 5, 7, 6]
 l7: list[int] = l4[-1:3:-2]
 print(f"l7 = l4[-1:3:-2] == {l7}")  # [7, 5, 6]
 
+l7[1] = 12  # Modify the slice l7 originally from l4.
+print(f"l4={l4}, l7={l7}")  # Shows that l4 remains unchanged.
+
 a, b, c = l2  # store the three elements of l2 into variables
 print(f"a={a}, b={b}, c={c}")  # a=5, b=6, c=7
