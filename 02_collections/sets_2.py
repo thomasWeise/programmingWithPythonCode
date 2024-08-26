@@ -1,4 +1,4 @@
-"""An example for creating and using sets."""
+"""An example for creating sets and set operations."""
 
 odd: set[int] = {1, 3, 5, 7, 9, 11, 13, 15}  # a subset of odd numbers
 print(f"some odd numbers are: {odd}")  # Print the set.

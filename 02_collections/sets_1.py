@@ -1,4 +1,4 @@
-"""An example for creating and modifying sets."""
+"""An example for creating, modifying, and converting sets."""
 
 upper: set[str] = {"A", "G", "B", "T", "V"}  # Some uppercase letters...
 print(f"some uppercase letters are: {upper}")  # Print the set.
