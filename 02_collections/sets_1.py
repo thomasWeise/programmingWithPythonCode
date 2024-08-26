@@ -1,23 +1,26 @@
-"""An example for creating and using sets."""
+"""An example for creating and modifying sets."""
 
-odd: set[int] = {1, 3, 5, 7, 9, 11, 13, 15}  # a subset of odd numbers
-print(f"some odd numbers are: {odd}")  # print the set
-prime: set[int] = {2, 3, 5, 7, 11, 13}  # a subset of the prime numbers
-print(f"some prime numbers are: {prime}")  # print the set
+upper: set[str] = {"A", "G", "B", "T", "V"}  # Some uppercase letters...
+print(f"some uppercase letters are: {upper}")  # Print the set.
 
-set_or: set[int] = odd.union(prime)  # create a new set as union of both
-print(f"{len(set_or)} numbers are in odd \u222A prime: {set_or},")
+upper.add("Z")  # Add the letter "Z" to the set.
+upper.add("A")  # The letter "A" is already in the set.
+upper.add("Z")  # The letter "Z" is already in the set.
+print(f"some more uppercase letters are: {upper}")  # Print the set.
 
-set_and: set[int] = odd.intersection(prime)  # compute the intersection
-print(f"{len(set_and)} are in odd \u2229 prime: {set_and},")
+upper.update(["K", "G", "W", "Q", "W"])  # Try to add 5 letters.
+print(f"even uppercase letters are: {upper}")  # Print the set.
 
-# get the numbers that are in one and only one of the two sets
-set_xor: set[int] = odd.symmetric_difference(prime)
-print(f"{len(set_xor)} are in (odd \u222A prime) "
-      f"\u2216 (odd \u2229 prime): {set_xor},")
+lower_tuple: tuple[str, ...] = ("b", "i", "j", "c", "t", "i")
+lower: set[str] = set(lower_tuple)  # Convert a tuple to a set.
+print(f"some lowercase letters are: {lower}")  # Print the set 'lower'.
 
-only_odd: set[int] = odd.difference(prime)  # odd but not prime
-print(f"{len(only_odd)} are in odd \u2216 prime: {only_odd}, and")
+letters: set[str] = set(lower)  # Copy the set of lowercase characters.
+letters.update(upper)  # Add all uppercase characters.
+print(f"some letters are: {letters}")  # Print the set 'letters'.
 
-only_prime: set[int] = prime.difference(odd)  # prime but not odd
-print(f"{len(only_prime)} are in prime \u2216 odd: {only_prime}")
+# Create a sorted list containing all elements of the set letters.
+# Warning: Strings are sorted such that uppercase characters come before
+# lowercase characters.
+letters_list: list[str] = sorted(letters)
+print(f"the sorted list of letters is: {letters_list}")
