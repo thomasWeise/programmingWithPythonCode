@@ -2,6 +2,9 @@
 
 numbers: list[int] = [1, 7, 56, 2, 4]  # Create the list.
 print(f"The numbers are: {numbers}.")  # Print the list.
+
+print(f"is 7 in the list: {7 in numbers}")  # Check if 7 is in the list.
+print(f"is 2 NOT in the list: {2 not in numbers}")  # the opposite check
 print(f"7 ist at index {numbers.index(7)}.")  # Search for number 7.
 print(f"2 ist at index {numbers.index(2)}.")  # Search for number 2.
 
@@ -24,3 +27,4 @@ print(f"cpy is numbers: {cpy is numbers}.")  # No, `cpy is not numbers`.
 del cpy[0]  # We change `cpy`, but `numbers` remains unchanged.
 print(f"cpy == numbers: {cpy == numbers}.")  # Now, `cpy != numbers`.
 print(f"cpy is numbers: {cpy is numbers}.")  # And `cpy is not numbers`.
+print(f"cpy is not numbers: {cpy is not numbers}.")  # indeed, it is not.

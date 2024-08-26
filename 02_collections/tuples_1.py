@@ -10,3 +10,5 @@ print(f"veggies[0] = {veggies[0]}")  # first element of `veggies`.
 print(f"veggies[1] = {veggies[1]}")  # second element of `veggies`.
 print(f"veggies[-1] = {veggies[-1]}")  # last element of `veggies`.
 print(f"veggies[-2] = {veggies[-2]}")  # second-to-last element.
+
+print(f"apple is at index {fruits.index('apple')} in fruits.")

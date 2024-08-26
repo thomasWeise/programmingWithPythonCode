@@ -2,6 +2,9 @@
 
 odd: set[int] = {1, 3, 5, 7, 9, 11, 13, 15}  # a subset of odd numbers
 print(f"some odd numbers are: {odd}")  # Print the set.
+print(f"is 3 \u2208 odd: {3 in odd}")  # Check if 3 is in the set odd.
+print(f"is 2 \u2209 odd: {2 not in odd}")  # Check if 2 is NOT in odd.
+
 prime: set[int] = {2, 3, 5, 7, 11, 13}  # a subset of the prime numbers
 print(f"some prime numbers are: {prime}")  # Print the set.
 
