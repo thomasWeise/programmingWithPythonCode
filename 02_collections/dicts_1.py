@@ -1,7 +1,7 @@
 """An example for dictionaries."""
 
 num_str: dict[int, str] = {  # create and type hint a dictionary
-    1: "one", 2: "two", 3: "three", 4: "four"}  # the elements
+    2: "two", 1: "one", 3: "three", 4: "four"}  # the elements
 print(f"num_str has {len(num_str)} elements: {num_str}")  # print dict
 print(f"I got {num_str[2]} shoes and {num_str[1]} hat.") # get element
 
@@ -20,5 +20,5 @@ print(f"after deleting key 4 num_str is now {num_str}")
 print(f"popping key 5 gets us {num_str.pop(5)}")
 
 str_num: dict[str, int] = {}  # create empty dictionary
-str_num.update({"one": 1, "two": 2, "three": 3, "four": 4})
+str_num.update({"one": 1, "three": 3, "two": 2, "four": 4})
 print(f"{num_str[1]} + {num_str[2]} = {str_num['three']}")
