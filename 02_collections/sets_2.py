@@ -14,15 +14,15 @@ print(f"{len(set_or)} numbers are in odd \u222A prime: {set_or},")
 set_and: set[int] = odd.intersection(prime)  # Compute the intersection.
 print(f"{len(set_and)} are in odd \u2229 prime: {set_and},")
 
+only_prime: set[int] = prime.difference(odd)  # Prime but not odd
+print(f"{len(only_prime)} are in prime \u2216 odd: {only_prime},")
+
 # Get the numbers that are in one and only one of the two sets.
 set_xor: set[int] = odd.symmetric_difference(prime)
 print(f"{len(set_xor)} are in (odd \u222A prime) "
-      f"\u2216 (odd \u2229 prime): {set_xor},")
+      f"\u2216 (odd \u2229 prime): {set_xor}, and")
 
 only_odd: set[int] = odd.difference(prime)  # Odd but not prime
 print(f"{len(only_odd)} are in odd \u2216 prime: {only_odd},")
 odd.difference_update(prime)  # delete all prime numbers from odd
-print(f"after deleting all primes from odd, we get {odd}, and")
-
-only_prime: set[int] = prime.difference(odd)  # Prime but not odd
-print(f"{len(only_prime)} are in prime \u2216 odd: {only_prime}")
+print(f"after deleting all primes from odd, we get {odd}")
