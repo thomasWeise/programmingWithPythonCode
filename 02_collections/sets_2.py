@@ -20,7 +20,9 @@ print(f"{len(set_xor)} are in (odd \u222A prime) "
       f"\u2216 (odd \u2229 prime): {set_xor},")
 
 only_odd: set[int] = odd.difference(prime)  # Odd but not prime
-print(f"{len(only_odd)} are in odd \u2216 prime: {only_odd}, and")
+print(f"{len(only_odd)} are in odd \u2216 prime: {only_odd},")
+odd.difference_update(prime)  # delete all prime numbers from odd
+print(f"after deleting all primes from odd, we get {odd}, and")
 
 only_prime: set[int] = prime.difference(odd)  # Prime but not odd
 print(f"{len(only_prime)} are in prime \u2216 odd: {only_prime}")
