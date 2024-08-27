@@ -11,4 +11,6 @@ print(f"veggies[1] = {veggies[1]}")  # second element of `veggies`.
 print(f"veggies[-1] = {veggies[-1]}")  # last element of `veggies`.
 print(f"veggies[-2] = {veggies[-2]}")  # second-to-last element.
 
+print(f"is pear in fruits: {'pear' in fruits}")
+print(f"is pear in veggies: {'pear' in veggies}")
 print(f"apple is at index {fruits.index('apple')} in fruits.")
