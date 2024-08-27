@@ -14,6 +14,8 @@ print(f"even uppercase letters are: {upper}")  # Print the set.
 lower_tuple: tuple[str, ...] = ("b", "i", "j", "c", "t", "i")
 lower: set[str] = set(lower_tuple)  # Convert a tuple to a set.
 print(f"some lowercase letters are: {lower}")  # Print the set 'lower'.
+lower.remove("b")  # Delete letter b from the set of lower case letters.
+print(f"lowercase letters after deleting 'b': {lower}")  # Print the set.
 
 letters: set[str] = set(lower)  # Copy the set of lowercase characters.
 letters.update(upper)  # Add all uppercase characters.
