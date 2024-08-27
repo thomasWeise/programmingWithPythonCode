@@ -19,8 +19,6 @@ print(f"after deleting key 4 num_str is now {num_str}")
 # get the value of a key, then delete it
 print(f"popping key 5 gets us {num_str.pop(5)}")
 
-num_str.update({1: "one", 4: "four", 5: "five"})  # add a dictionary
-print(f"after the update, num_str={num_str}")
-
-str_num: dict[str, int] = {"one": 1, "two": 2, "three": 3, "four": 4}
+str_num: dict[str, int] = {}  # create empty dictionary
+str_num.update({"one": 1, "two": 2, "three": 3, "four": 4})
 print(f"{num_str[1]} + {num_str[2]} = {str_num['three']}")
