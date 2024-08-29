@@ -3,7 +3,7 @@
 num_str: dict[int, str] = {  # create and type hint a dictionary
     2: "two", 1: "one", 3: "three", 4: "four"}  # the elements
 print(f"num_str has {len(num_str)} elements: {num_str}")  # print dict
-print(f"I got {num_str[2]} shoes and {num_str[1]} hat.") # get element
+print(f"I got {num_str[2]} shoes and {num_str[1]} hat.")  # get element
 
 print(f"the keys are: {list(num_str.keys())}")  # print the keys
 print(f"the values are: {list(num_str.values())}")  # print the values

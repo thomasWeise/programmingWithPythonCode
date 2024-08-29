@@ -19,7 +19,7 @@ elif age <= 50:  # If ... (NOT age <= 35) and (age <= 50)
     phase = "midlife"
 elif age < 80:  # If ... (NOT age <= 50) and (age < 80)
     phase = "mature adulthood"
-else:  #  otherwise, i.e., if age >= 8
+else:  # otherwise, i.e., if age >= 8
     phase = "late adulthood"
 
 print(f"A person of {age} years is in their {phase}.")
