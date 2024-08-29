@@ -1,4 +1,4 @@
-"""An example for using the inline if-else expression."""
+"""An example of if-elif-else expressions that could be inlined."""
 
 number: int = 100  # the number
 
