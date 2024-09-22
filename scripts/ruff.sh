@@ -23,7 +23,7 @@ if [ -z "$infos" ]; then
   # ruff is not installed, so we install it now.
   # We do this silently, without printing any information...
   "$PYTHON_INTERPRETER" -m pip install ruff 1>/dev/null 2>&1
-  infos="$("$PYTHON_INTERPRETER" -m pip show ruff 2>/dev/null)"  # Now contains ruff version.
+  infos="$("$PYTHON_INTERPRETER" -m pip show ruff 2>/dev/null)"
 fi
 # We now extract the version of ruff from the information string.
 version="$(grep Version: <<< "$infos")"
