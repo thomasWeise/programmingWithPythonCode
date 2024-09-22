@@ -12,35 +12,37 @@ set -o errtrace  # trace errors through commands and functions
 set -o nounset   # exit if encountering an uninitialized variable
 set -o errexit   # exit if any statement returns a non-0 return value
 
+# Find the Python interpreter.
+if [[ $(declare -p PYTHON_INTERPRETER 2>/dev/null) != declare\ ?x* ]]; then
+  export PYTHON_INTERPRETER="$(readlink -f "$(which python3)")"
+fi
+
 # First we check if mypy is installed and if so, get its version.
-mypyInfos="$(pip show mypy 2>/dev/null || true)"
-if [ -z "$mypyInfos" ]; then
+infos="$("$PYTHON_INTERPRETER" -m pip show mypy 2>/dev/null || true)"
+if [ -z "$infos" ]; then
   # mypy is not installed, so we install it now.
   # We do this silently, without printing any information...
-  pip install mypy 1>/dev/null 2>&1
-  mypyInfos="$(pip show mypy 2>/dev/null)"  # Now contains mypy version.
+  "$PYTHON_INTERPRETER" -m install mypy 1>/dev/null 2>&1
+  infos="$("$PYTHON_INTERPRETER" -m pip show mypy 2>/dev/null)"
 fi
 # We now extract the version of mypy from the information string.
-mypyVer="$(grep Version: <<< "$mypyInfos")"
-mypyVer="$(sed -n 's/.*Version:\s*\([.0-9]*\)/\1/p' <<< "$mypyVer")"
+version="$(grep Version: <<< "$infos")"
+version="$(sed -n 's/.*Version:\s*\([.0-9]*\)/\1/p' <<< "$version")"
 
 # Construct the mypy command.
-mypyCmd="mypy $2 --no-strict-optional --check-untyped-defs"
+command="mypy $2 --no-strict-optional --check-untyped-defs"
 
-echo "\$ $mypyCmd"  # We print the command line which will be executed.
+echo "\$ $command"  # We print the command line which will be executed.
 cd "$1"  # We enter the folder inside of which we should execute mypy.
 
 # Switch of "exit-on-error", run mypy, and afterwards switch it back on.
 set +o errexit  # Turn off exit-on-error.
-$mypyCmd 2>&1
+$command 2>&1
 exitCode="$?"  # Store exit code of program in variable exitCode.
 set -o errexit  # Turn exit-on-error back on.
 
-if (("$exitCode" != 0)) ; then
-  exitCodeStr="failed"  # mypy failed with a non-zero exit code.
-else
-  exitCodeStr="succeeded"  # mypy succeeded: the exit code is 0.
-fi
+# Convert exit code to success or failure string.
+[ "$exitCode" -eq 0 ] && exitCodeStr="succeeded" || exitCodeStr="failed"
 
 # Finally, we print the result string.
-echo "# mypy $mypyVer $exitCodeStr with exit code $exitCode."
+echo "# mypy $version $exitCodeStr with exit code $exitCode."

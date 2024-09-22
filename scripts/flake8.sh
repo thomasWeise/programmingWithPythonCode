@@ -12,15 +12,20 @@ set -o errtrace  # trace errors through commands and functions
 set -o nounset   # exit if encountering an uninitialized variable
 set -o errexit   # exit if any statement returns a non-0 return value
 
+# Find the Python interpreter.
+if [[ $(declare -p PYTHON_INTERPRETER 2>/dev/null) != declare\ ?x* ]]; then
+  export PYTHON_INTERPRETER="$(readlink -f "$(which python3)")"
+fi
+
 # First we check if flake8 and all required plugins are installed.
 versions=""  # This variable will receive all tool versions.
 for flake in "flake8" "flake8-bugbear" "flake8-eradicate" "flake8-use-fstring" "flake8-pie" "dlint"; do
-  infos="$(pip show "$flake" 2>/dev/null || true)"
+  infos="$("$PYTHON_INTERPRETER" -m pip show "$flake" 2>/dev/null || true)"
   if [ -z "$infos" ]; then
     # flake8 or the plugin is not installed, so we install it now.
     # We do this silently, without printing any information...
-    pip install "$flake" 1>/dev/null 2>&1
-    infos="$(pip show "$flake" 2>/dev/null)"  # Now contains flake8 version.
+    "$PYTHON_INTERPRETER" -m pip install "$flake" 1>/dev/null 2>&1
+    infos="$("$PYTHON_INTERPRETER" -m pip show "$flake" 2>/dev/null)"
   fi
 
   # For each tool or plugin, we get the version separately.
@@ -36,22 +41,19 @@ for flake in "flake8" "flake8-bugbear" "flake8-eradicate" "flake8-use-fstring" "
 done
 
 # Construct the flake8 command.
-flakeCmd="flake8 $2 --ignore=B008,B009,B010,DUO102,TRY003,TRY101,W503"
+command="flake8 $2 --ignore=B008,B009,B010,DUO102,TRY003,TRY101,W503"
 
-echo "\$ $flakeCmd"  # We print the command line which will be executed.
+echo "\$ $command"  # We print the command line which will be executed.
 cd "$1"  # We enter the folder inside of which we should execute flake8.
 
 # Switch of "exit-on-error", run flake8, and afterwards switch it back on.
 set +o errexit  # Turn off exit-on-error.
-$flakeCmd 2>&1
+$command 2>&1
 exitCode="$?"  # Store exit code of program in variable exitCode.
 set -o errexit  # Turn exit-on-error back on.
 
-if (("$exitCode" != 0)) ; then
-  exitCodeStr="failed"  # flake8 failed with a non-zero exit code.
-else
-  exitCodeStr="succeeded"  # flake8 succeeded: the exit code is 0.
-fi
+# Convert exit code to success or failure string.
+[ "$exitCode" -eq 0 ] && exitCodeStr="succeeded" || exitCodeStr="failed"
 
 # Finally, we print the result string.
 echo "# $versions $exitCodeStr with exit code $exitCode."
