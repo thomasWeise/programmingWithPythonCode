@@ -22,7 +22,7 @@ infos="$("$PYTHON_INTERPRETER" -m pip show mypy 2>/dev/null || true)"
 if [ -z "$infos" ]; then
   # mypy is not installed, so we install it now.
   # We do this silently, without printing any information...
-  "$PYTHON_INTERPRETER" -m install mypy 1>/dev/null 2>&1
+  "$PYTHON_INTERPRETER" -m pip install mypy 1>/dev/null 2>&1
   infos="$("$PYTHON_INTERPRETER" -m pip show mypy 2>/dev/null)"
 fi
 # We now extract the version of mypy from the information string.
