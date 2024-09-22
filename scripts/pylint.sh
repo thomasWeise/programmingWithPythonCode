@@ -37,7 +37,7 @@ cd "$1"  # We enter the folder inside of which we should execute pylint.
 
 # Switch of "exit-on-error", run pylint, and afterwards switch it back on.
 set +o errexit  # Turn off exit-on-error.
-$command 2>&1  # Run pylint.
+"$PYTHON_INTERPRETER" -m $command 2>&1  # Run pylint.
 exitCode="$?"  # Store exit code of program in variable exitCode.
 set -o errexit  # Turn exit-on-error back on.
 
