@@ -1,7 +1,7 @@
 """Apply a for loop over a range."""
 
 # We will construct a dictionary holding square numbers.
-squares: dict[int, int] = {}
+squares: dict[int, int] = {}  # Initialize `squares` as empty dict.
 
 for i in range(4):  # i takes on the values 0, 1, 2, and 3 one by one.
     squares[i] = i * i  # Stores 0: 0, 1: 1, 2: 4, 3: 9.
@@ -17,5 +17,5 @@ for i in range(40, 30, -3):  # i takes on the values 40, 37, 34, and 31.
 
 print(squares)  # Print the dictionary.
 
-for _ in range(3):  # Iterate the loop body three times. Ignore counter.
-    print("Hello World!")  # We don't need the counter, so we call it "_".
+for _ in range(3):  # Iterate the loop three times. Ignore counter `_`.
+    print("Hello World!")  # We don't need the counter.
