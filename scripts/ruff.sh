@@ -17,7 +17,7 @@ if [[ $(declare -p PYTHON_INTERPRETER 2>/dev/null) != declare\ ?x* ]]; then
   export PYTHON_INTERPRETER="$(which python3)"  # If not, then we set it.
 fi
 
-# First we check if ruff is installed and if so, get its version.
+# Check if ruff is installed. If yes, get its version. If no, install it.
 infos="$("$PYTHON_INTERPRETER" -m pip show ruff 2>/dev/null || true)"
 if [ -z "$infos" ]; then
   # ruff is not installed, so we install it now.

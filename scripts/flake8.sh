@@ -17,7 +17,7 @@ if [[ $(declare -p PYTHON_INTERPRETER 2>/dev/null) != declare\ ?x* ]]; then
   export PYTHON_INTERPRETER="$(which python3)"  # If not, then we set it.
 fi
 
-# First we check if flake8 and all required plugins are installed.
+# Check if flake8 and all required plugins are installed.
 versions=""  # This variable will receive all tool versions.
 for flake in "flake8" "flake8-bugbear" "flake8-eradicate" "flake8-use-fstring" "flake8-pie" "dlint"; do
   infos="$("$PYTHON_INTERPRETER" -m pip show "$flake" 2>/dev/null || true)"
