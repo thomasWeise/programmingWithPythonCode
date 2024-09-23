@@ -12,9 +12,9 @@ set -o errtrace  # trace errors through commands and functions
 set -o nounset   # exit if encountering an uninitialized variable
 set -o errexit   # exit if any statement returns a non-0 return value
 
-# Find the Python interpreter.
+# Find the Python interpreter. PYTHON_INTERPRETER maybe set by latexgit.
 if [[ $(declare -p PYTHON_INTERPRETER 2>/dev/null) != declare\ ?x* ]]; then
-  export PYTHON_INTERPRETER="$(readlink -f "$(which python3)")"
+  export PYTHON_INTERPRETER="$(which python3)"  # If not, then we set it.
 fi
 
 # First we check if pylint is installed and if so, get its version.
