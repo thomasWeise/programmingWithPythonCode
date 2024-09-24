@@ -1,4 +1,4 @@
-"""Explore the `break` and `continue` statements.."""
+"""Here we explore the `break` and `continue` statements."""
 
 for i in range(15):  # i takes on the values from 0 to 14 one by one.
     s: str = f"i is now {i}."  # Create a string with the value of i.
