@@ -11,7 +11,7 @@ for f in tp:  # i takes on the values 7.6, 9.4, and 8.1.
     txt.append(f"f={f}")  # We store "f=7.6", "f=9.4", and "f=8.1"
 
 st: set[str] = {"u", "v", "w"}  # Create a set with 3 strings.
-for s in st:  # s takes on the values "u", "v", and "w".
+for s in st:  # s takes on the values "u", "v", and "w" (unordered!).
     txt.append(f"s={s!r}")  # We store "s='u'", "s='v'", and "s='w'".
 
 dc: dict[float, bool] = {1.1: True, 2.5: False}  # Create a dictionary.
