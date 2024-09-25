@@ -12,20 +12,15 @@ set -o errtrace  # trace errors through commands and functions
 set -o nounset   # exit if encountering an uninitialized variable
 set -o errexit   # exit if any statement returns a non-0 return value
 
-# Find the Python interpreter. PYTHON_INTERPRETER maybe set by latexgit.
-if [[ $(declare -p PYTHON_INTERPRETER 2>/dev/null) != declare\ ?x* ]]; then
-  export PYTHON_INTERPRETER="$(which python3)"  # If not, then we set it.
-fi
-
 # Check if flake8 and all required plugins are installed.
 versions=""  # This variable will receive all tool versions.
 for flake in "flake8" "flake8-bugbear" "flake8-eradicate" "flake8-use-fstring" "flake8-pie" "dlint"; do
-  infos="$("$PYTHON_INTERPRETER" -m pip show "$flake" 2>/dev/null || true)"
+  infos="$(python3 -m pip show "$flake" 2>/dev/null || true)"
   if [ -z "$infos" ]; then
     # flake8 or the plugin is not installed, so we install it now.
     # We do this silently, without printing any information...
-    "$PYTHON_INTERPRETER" -m pip install "$flake" 1>/dev/null 2>&1
-    infos="$("$PYTHON_INTERPRETER" -m pip show "$flake" 2>/dev/null)"
+    python3 -m pip install "$flake" 1>/dev/null 2>&1
+    infos="$(python3 -m pip show "$flake" 2>/dev/null)"
   fi
 
   # For each tool or plugin, we get the version separately.
@@ -48,7 +43,7 @@ cd "$1"  # We enter the folder inside of which we should execute flake8.
 
 # Switch of "exit-on-error", run flake8, and afterwards switch it back on.
 set +o errexit  # Turn off exit-on-error.
-"$PYTHON_INTERPRETER" -m $command 2>&1
+python3 -m $command 2>&1
 exitCode="$?"  # Store exit code of program in variable exitCode.
 set -o errexit  # Turn exit-on-error back on.
 

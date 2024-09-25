@@ -10,16 +10,11 @@ set -o errtrace  # trace errors through commands and functions
 set -o nounset   # exit if encountering an uninitialized variable
 set -o errexit   # exit if any statement returns a non-0 return value
 
-# Find the Python interpreter. PYTHON_INTERPRETER maybe set by latexgit.
-if [[ $(declare -p PYTHON_INTERPRETER 2>/dev/null) != declare\ ?x* ]]; then
-  export PYTHON_INTERPRETER="$(which python3)"  # If not, then we set it.
-fi
-
 cd "$1"  # Enter the folder inside of which we should run the program.
 
 # Switch of "exit-on-error", run the program, then switch it back on.
 set +o errexit  # Turn off exit-on-error.
-"$PYTHON_INTERPRETER" $2 2>&1 # Run the program
+python3 $2 2>&1 # Run the program
 exitCode="$?"  # Store exit code of program in variable exitCode.
 set -o errexit  # Turn exit-on-error back on.
 
