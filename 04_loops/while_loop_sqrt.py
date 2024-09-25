@@ -1,4 +1,4 @@
-"""Using a `while` loop to implement the Heron's Method."""
+"""Using a `while` loop to implement Heron's Method."""
 
 from math import sqrt  # math.sqrt is as exact with float as possible.
 
