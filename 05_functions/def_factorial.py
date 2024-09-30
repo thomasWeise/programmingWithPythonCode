@@ -13,5 +13,5 @@ def factorial(a: int) -> int:  # 1 `int` parameter and `int` result
     return product  # Return the product, which now is the factorial.
 
 
-for j in range(10):  # Test the `factorial` function for `i` in v0..9`.
+for j in range(10):  # Test the `factorial` function for `i` in 0..9`.
     print(f"The factorial of {j} is {factorial(j)}.")
