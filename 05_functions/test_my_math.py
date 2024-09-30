@@ -1,12 +1,22 @@
-"""Testing our second implementation of Heron's Method."""
+"""Testing our mathematical functions."""
 
 from math import inf, isnan, nan  # some float value-checking functions
 
-from def_sqrt_2 import sqrt  # Get our 2nd square root implementation.
+from my_math import factorial, sqrt  # Import our two functions.
+
+
+def test_factorial() -> None:
+    """Test the function `factorial` from module `my_math`."""
+    assert factorial(0) == 1  # 0! == 1
+    assert factorial(1) == 1  # 1! == 1
+    assert factorial(2) == 2  # 2! == 2
+    assert factorial(3) == 6  # 3! == 6
+    assert factorial(12) == 479_001_600  # 12! == 4790'016'00
+    assert factorial(30) == 265_252_859_812_191_058_636_308_480_000_000
 
 
 def test_sqrt() -> None:
-    """Test the function `sqrt` from module `def_sqrt_2`."""
+    """Test the function `sqrt` from module `my_math`."""
     assert sqrt(0.0) == 0.0  # The square root of 0 is 0.
     assert sqrt(1.0) == 1.0  # The square root of 1 is 1.
     assert sqrt(4.0) == 2.0  # The square root of 4 is 2.

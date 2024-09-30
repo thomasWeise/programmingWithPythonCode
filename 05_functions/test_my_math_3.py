@@ -1,12 +1,14 @@
-"""Testing our implementation of Heron's Method."""
+"""Testing our third version of the `my_math` module."""
 
 from math import inf, isnan, nan  # some float value-checking functions
 
-from def_sqrt_1 import sqrt  # Get our square root implementation.
+from my_math_3 import sqrt  # Get our 3rd square root implementation.
+
+# test_factorial() is omitted for brevity
 
 
 def test_sqrt() -> None:
-    """Test the function `sqrt` from module `def_sqrt_1`."""
+    """Test the function `sqrt` from module `my_math_3`."""
     assert sqrt(0.0) == 0.0  # The square root of 0 is 0.
     assert sqrt(1.0) == 1.0  # The square root of 1 is 1.
     assert sqrt(4.0) == 2.0  # The square root of 4 is 2.

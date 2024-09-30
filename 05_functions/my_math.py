@@ -1,4 +1,17 @@
-"""Implementing Heron's Method as a Function."""
+"""A module with mathematics routines."""
+
+
+def factorial(a: int) -> int:  # 1 `int` parameter and `int` result
+    """
+    Compute the factorial of a positive integer `a`.
+
+    :param a: the number to compute the factorial of
+    :return: the factorial of `a`, i.e., `a!`.
+    """
+    product: int = 1  # Initialize `product` as `1`.
+    for i in range(2, a + 1):  # `i` goes from `2` to `a`.
+        product *= i  # Multiply `i` to the product.
+    return product  # Return the product, which now is the factorial.
 
 
 def sqrt(number: float) -> float:
