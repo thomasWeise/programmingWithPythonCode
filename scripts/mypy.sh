@@ -26,7 +26,6 @@ version="$(sed -n 's/.*Version:\s*\([.0-9]*\)/\1/p' <<< "$version")"
 
 # Construct the mypy command.
 command="mypy $2 --no-strict-optional --check-untyped-defs"
-
 echo "\$ $command"  # We print the command line which will be executed.
 cd "$1"  # We enter the folder inside of which we should execute mypy.
 

@@ -26,7 +26,6 @@ version="$(sed -n 's/.*Version:\s*\([.0-9]*\)/\1/p' <<< "$version")"
 
 # Construct the pylint command.
 command="pylint $2 --disable=C0103,C0302,C0325,R0801,R0901,R0902,R0903,R0911,R0912,R0913,R0914,R0915,R1702,R1728,W0212,W0238,W0703"
-
 echo "\$ $command"  # We print the command line which will be executed.
 cd "$1"  # We enter the folder inside of which we should execute pylint.
 

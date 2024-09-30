@@ -37,7 +37,6 @@ done
 
 # Construct the flake8 command.
 command="flake8 $2 --ignore=B008,B009,B010,DUO102,TRY003,TRY101,W503"
-
 echo "\$ $command"  # We print the command line which will be executed.
 cd "$1"  # We enter the folder inside of which we should execute flake8.
 
