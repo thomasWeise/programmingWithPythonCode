@@ -1,5 +1,6 @@
 """Implementing the factorial as a function."""
 
+
 def factorial(a: int) -> int:  # 1 `int` parameter and `int` result
     """
     Compute the factorial of a positive integer `a`.

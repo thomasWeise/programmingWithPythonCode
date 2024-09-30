@@ -2,6 +2,7 @@
 
 from math import gcd as math_gcd  # Use math's gcd under name `math_gcd`.
 
+
 def gcd(a: int, b: int) -> int:  # 2 `int` parameters and `int` result
     """
     Compute the greatest common divisor of two numbers `a` and `b`.
