@@ -27,7 +27,7 @@ for pack in "pytest" "pytest-timeout"; do
   infos="$(grep Version: <<< "$infos")"
   infos="$(sed -n 's/.*Version:\s*\([.0-9]*\)/\1/p' <<< "$infos")"
   if [ -z "$versions" ]; then  # ... and we concatenate them
-    versions="$pack $infos with plugins"
+    versions="$pack $infos with "
   elif [[ "$versions" == *plugins ]]; then
     versions="$versions $pack $infos"
   else

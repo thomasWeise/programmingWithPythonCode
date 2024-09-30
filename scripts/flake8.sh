@@ -27,7 +27,7 @@ for flake in "flake8" "flake8-bugbear" "flake8-eradicate" "flake8-use-fstring" "
   infos="$(grep Version: <<< "$infos")"
   infos="$(sed -n 's/.*Version:\s*\([.0-9]*\)/\1/p' <<< "$infos")"
   if [ -z "$versions" ]; then  # ... and we concatenate them
-    versions="$flake $infos with plugins"
+    versions="$flake $infos with "
   elif [[ "$versions" == *plugins ]]; then
     versions="$versions $flake $infos"
   else
