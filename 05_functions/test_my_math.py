@@ -22,6 +22,6 @@ def test_sqrt() -> None:
     assert sqrt(4.0) == 2.0  # The square root of 4 is 2.
     s3: float = sqrt(3.0)  # Get the approximated square root of 3.
     assert abs(s3 * s3 - 3.0) <= 5e-16  # sqrt(3)² should be close to 3.
-    assert sqrt(10e9 * 10e9) == 10e9  # 10e9² = 10e9 * 10e9
+    assert sqrt(1e10 * 1e10) == 1e10  # 1e10² = 1e10 * 1e10
     assert sqrt(inf) == inf  # The square root of +inf is +inf.
     assert isnan(sqrt(nan))  # The root of not-a-number is still nan.
