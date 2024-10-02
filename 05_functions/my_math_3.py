@@ -23,5 +23,3 @@ def sqrt(number: float) -> float:
         old_guess = guess  # The current guess becomes the old guess.
         guess = 0.5 * (guess + number / guess)  # The new guess.
     return guess
-
-#
