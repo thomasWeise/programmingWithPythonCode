@@ -7,8 +7,8 @@ def pdf(x: float, mu: float = 0.0, sigma: float = 1.0) -> float:
     """
     Compute the probability density function of the normal distribution.
 
-    :param x: the point at which to evaluate the normal PDF
-    :param mu: the expected value or arithmetic mean, defaults to `0`.
+    :param x: the coordinate at which to evaluate the normal PDF
+    :param mu: the expected value or arithmetic mean, defaults to `0.0`.
     :param sigma: the standard deviation, defaults to `1.0`
     :return: the value of the normal PDF at `x`.
     """
