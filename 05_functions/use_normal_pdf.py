@@ -17,4 +17,5 @@ args_tup: tuple[float, float, float] = (-2.0, 7.0, 3.0)
 print(f"f(-2,7,3) = {pdf(*args_tup)}")  # notice the single "*"
 
 # We call the function using a list of values, but leave one default.
-print(f"f(2,3,1) = {pdf(*[2.0, 3.0])}")  # notice the single "*"
+args_lst: list[float] = [2.0, 3.0]
+print(f"f(2,3,1) = {pdf(*args_lst)}")  # notice the single "*"
