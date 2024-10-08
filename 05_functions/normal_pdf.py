@@ -14,10 +14,3 @@ def pdf(x: float, mu: float = 0.0, sigma: float = 1.0) -> float:
     """
     s2: float = 2 * (sigma ** 2)  # stored for reuse
     return exp((-((x - mu) ** 2)) / s2) / sqrt(pi * s2)  # compute pdf
-
-
-print(f"f(0,0,1) = {pdf(0.0)}")  # x is given, default used otherwise.
-print(f"f(2,3,1) = {pdf(2.0, 3.0)}")  # x and mu are given, sigma=1.0.
-print(f"f(-2,7,3) = {pdf(-2.0, 7.0, 3.0)}")  # all three are given.
-print(f"f(-2,0,3) = {pdf(-2.0, sigma=3.0)}")  # x and sigma given.
-print(f"f(0,8,1.5) = {pdf(mu=8.0, x=0.0, sigma=1.5)}")  # unordered...
