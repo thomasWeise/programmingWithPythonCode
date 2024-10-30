@@ -7,3 +7,5 @@ try:  # If this block raises an error, we continue at `except`.
         print(f"{s!r} is at index {text.index(s)}.")
 except ValueError as ve:  # ValueError is raised if `s` isn't in `text`.
     print(ve)  # We get here because "world" is not in "Hello World!".
+
+print("The program is now finished.")  # We get here after except block.

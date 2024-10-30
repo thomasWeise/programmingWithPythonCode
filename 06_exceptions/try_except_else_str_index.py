@@ -17,3 +17,5 @@ except ValueError as ve:  # ValueError is raised if `s` isn't in `text`.
     print(ve)  # We never get here: This time, we look for "World".
 else:  # The else block is only invoked if no exception occurred.
     print("Everything is OK 2.")  # So this time, this code is executed.
+
+print("The program is now finished.")  # We get here after except block.
