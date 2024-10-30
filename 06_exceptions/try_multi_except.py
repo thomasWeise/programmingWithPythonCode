@@ -13,5 +13,6 @@ except DivisionByZero as de:  # A division by zero?
 except ArithmeticError as ae:  # Or an ArithmeticError?
     print(f"We got an arithmetic error: {ae}.", flush=True)
 
+print("Now we try to print the value of sqrt_of_1_div_0.", flush=True)
 print(sqrt_of_1_div_0)  # Does not work: sqrt_of_1_div_0 is not assigned
 print("The program is now finished.")  # We never get here.
