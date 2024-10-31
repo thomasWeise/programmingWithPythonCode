@@ -8,10 +8,8 @@ def divide_and_print(a: int | float, b: int | float) -> None:
     :param a: the dividend
     :param b: the divisor
     """
-    print(f"\nWe try to divide {a} by {b}.", flush=True)
-
-    try:  # We try to do some computation.
-        print(f"{a} / {b} = {a / b}")  # Try the division and print.
+    try:  # We try to do some computation that may cause an Exception.
+        print(f"{a} / {b} = {a / b}", flush=True)  # Divide and print.
     except ZeroDivisionError as zd:  # Is b == 0 ?
         print(f"We got a ZeroDivisionError when doing {a} / {b}: {zd}.")
     except TypeError as te:  # Has one of the values the wrong type?
@@ -20,7 +18,6 @@ def divide_and_print(a: int | float, b: int | float) -> None:
         print(f"No error occurred when computing {a} / {b}.")
     finally:  # This code is always called.
         print(f"We are finally done with division-by-{b}.", flush=True)
-
     print(f"This code comes after all the {a} by {b} division code.")
 
 
