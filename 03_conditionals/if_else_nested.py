@@ -1,4 +1,4 @@
-"""An example for using the nested `if-else` statements."""
+"""An example of using the nested `if-else` statements."""
 
 a: int = 13  # the first number
 b: int = 7  # the second number

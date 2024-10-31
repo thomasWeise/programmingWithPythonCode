@@ -1,4 +1,4 @@
-"""An example for creating, indexing, and printing lists."""
+"""An example of creating, indexing, and printing lists."""
 
 fruits: list[str] = ["apple", "pear", "orange"]  # Create List.
 print(f"We got {len(fruits)} fruits: {fruits}")  # Print length and list.

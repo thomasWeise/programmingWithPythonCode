@@ -1,4 +1,4 @@
-"""An example for `elif` using human age groups."""
+"""An example of `elif` using human age groups."""
 
 age: int = 42  # the age of the person
 phase: str | None = None  # the life phase, to be computed

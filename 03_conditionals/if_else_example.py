@@ -1,4 +1,4 @@
-"""An example for using the `if-else` statement."""
+"""An example of using the `if-else` statement."""
 
 year: int = 2024  # the year 2024 should be a leap year
 if (((year % 4) == 0) and ((year % 100) != 0)) or ((year % 400) == 0):

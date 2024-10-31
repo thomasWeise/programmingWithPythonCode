@@ -1,4 +1,4 @@
-"""An example for testing the immutability of tuples."""
+"""An example of testing the immutability of tuples."""
 
 # Create a tuple consisting of an immutable object (the integer `1`) and
 # a mutable object (the list [2]).

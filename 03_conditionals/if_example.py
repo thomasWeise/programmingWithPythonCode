@@ -1,5 +1,5 @@
 """
-An example for using the `if` statement.
+An example of using the `if` statement.
 
 A year is a leap year if it is divisible by 4 but not divisible by 100
 or if it is divisible by 400.

@@ -1,4 +1,4 @@
-"""An example for creating tuples of mixed types."""
+"""An example of creating tuples of mixed types."""
 
 mixed: tuple[str, int, float] = ("apple", 12, 1e25)  # mixed types
 print(f"The mixed tuple is {mixed}.")  # print the tuple

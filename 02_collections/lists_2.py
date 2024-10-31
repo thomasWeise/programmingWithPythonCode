@@ -1,4 +1,4 @@
-"""An example for creating, modifying, sorting, and copying lists."""
+"""An example of creating, modifying, sorting, and copying lists."""
 
 numbers: list[int] = [1, 7, 56, 2, 4]  # Create the list.
 print(f"The numbers are: {numbers}.")  # Print the list.

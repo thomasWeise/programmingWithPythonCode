@@ -1,4 +1,4 @@
-"""An example for creating, indexing, and printing tuples."""
+"""An example of creating, indexing, and printing tuples."""
 
 fruits: tuple[str, str, str] = ("apple", "pear", "orange")
 print(f"We got {len(fruits)} fruits: {fruits}")

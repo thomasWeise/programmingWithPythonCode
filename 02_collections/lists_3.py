@@ -1,4 +1,4 @@
-"""An example for more operations with lists."""
+"""An example of more operations with lists."""
 
 l1: list[int] = [1, 2, 3, 4]  # create first list
 l2: list[int] = [5, 6, 7]  # create second list

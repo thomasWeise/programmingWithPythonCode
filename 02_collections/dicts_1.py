@@ -1,4 +1,4 @@
-"""An example for dictionaries."""
+"""An example of dictionaries."""
 
 num_str: dict[int, str] = {  # create and type hint a dictionary
     2: "two", 1: "one", 3: "three", 4: "four"}  # the elements
