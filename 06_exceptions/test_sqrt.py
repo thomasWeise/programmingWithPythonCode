@@ -23,5 +23,5 @@ def sqrt(number: float) -> float:
 def test_sqrt() -> None:
     """Test the function `sqrt` that does not raise Exceptions."""
     # ... We skip the other tests here for space reasons.
-    with raises(ArithmeticError, match="sqrt(.*) is not permitted."):
-        sqrt(-1.0)  # The square root of negative numbers is not permitted
+    with raises(ArithmeticError):  # We can also test without `match`.
+        sqrt(-1.0)  # This is not permitted, but no Exception is raised.
