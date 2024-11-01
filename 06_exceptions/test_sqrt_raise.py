@@ -16,5 +16,5 @@ def test_sqrt() -> None:
         with raises(ArithmeticError, match="sqrt.* is not permitted."):
             sqrt(v)  # The square root of v is not permitted
 
-    with raises(ValueError):  # Just to show that testing can fail if
-        sqrt(1)               # the anticipated Exception is not raised.
+    with raises(TypeError):  # Just to show that testing can fail if
+        sqrt(1)              # the anticipated Exception is not raised.
