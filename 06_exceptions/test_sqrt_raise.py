@@ -1,4 +1,4 @@
-"""Testing our mathematical functions."""
+"""Testing our sqrt function that raises an error for invalid inputs."""
 
 from math import inf, nan  # some maths constants
 
