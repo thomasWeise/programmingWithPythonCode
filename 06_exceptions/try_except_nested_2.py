@@ -6,7 +6,7 @@ sqrt_of_1_div_0: float  # Declare this variable, but do not assign it.
 
 try:  # If this block raises an error, we continue at `except`.
     # sqrt_of_1_div_0 only gets assigned if sqrt(1 / 0) succeeds...
-    sqrt_of_1_div_0 = sqrt(1 / 0)  # Which error will this produce?
+    sqrt_of_1_div_0 = sqrt(1 / 0)  # This produces a ZeroDivisionError.
 except ZeroDivisionError as de:  # Catch an ZeroDivisionError.
     print(f"We got a division-by-zero error: {de}.", flush=True)
     try:  # Nesting try-except blocks is totally fine.
