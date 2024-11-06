@@ -13,8 +13,8 @@ print(f"result of comprehension: {squares_1}")  # Print the result.
 even_numbers: list[int] = [k for k in range(10) if k % 2 == 0]
 print(f"even numbers: {even_numbers}")
 
-combinations: list[str] = [f"{a}{b}" for a in "abc" for b in "xy"]
+combinations: list[str] = [f"{m}{n}" for m in "abc" for n in "xy"]
 print(f"letter combinations: {combinations}")
 
-nested: list[tuple[str, str]] = [(a, b) for a in "abc" for b in "xy"]
+nested: list[tuple[str, str]] = [(o, p) for o in "abc" for p in "xy"]
 print(f"letter combinations as tuples: {nested}")
