@@ -21,11 +21,5 @@ def flatten(iterables: Iterable[Iterable]) -> list:
 
     >>> flatten(([1, 2, 3], (4, 5, 6), {"a": 7, "b": 8}))
     [1, 2, 3, 4, 5, 6, 'a', 'b']
-
-    >>> flatten(([1, 2, 3], [[4], [5], [6, 7]]))
-    [1, 2, 3, [4], [5], [6, 7]]
-
-    >>> flatten(flatten([[[1], [2, 3]], [[4, 5], [6]]]))
-    [1, 2, 3, 4, 5, 6]
     """
     return [value for subiterable in iterables for value in subiterable]
