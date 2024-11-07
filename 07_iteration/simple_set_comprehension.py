@@ -4,7 +4,7 @@ from math import isqrt  # computes the integer parts of square roots
 
 roots_1: set[int] = set()  # We can start with an empty set.
 for i in range(100):  # Then we use a for-loop over the numbers 0 to 99.
-    roots_1.add(isqrt(i))  # And add the integer parts of the sqrt to the list.
+    roots_1.add(isqrt(i))  # Add the integer part of sqrt to the set.
 
 print(f" result of construction: {roots_1}")  # Print the result.
 
