@@ -3,7 +3,6 @@
 squares_1: list[int] = []  # We can start with an empty list.
 for i in range(11):  # Then we use a for-loop over the numbers 0 to 10.
     squares_1.append(i ** 2)  # And append the squares to the list.
-
 print(f" result of construction: {squares_1}")  # Print the result.
 
 # Or we use list comprehension as follows:
