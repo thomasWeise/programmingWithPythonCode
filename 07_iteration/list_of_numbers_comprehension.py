@@ -12,9 +12,9 @@ def create_by_comprehension() -> list[int]:
     return [i for i in range(1_000_001) if i % 2 == 0]
 
 
-# Perform 90 repetitions of 1 execution of create_by_comprehension.
+# Perform 50 repetitions of 1 execution of create_by_comprehension.
 # Obtain the minimum runtime of any execution as the lower bound of how
 # fast this code can run.
 time_in_s: float = min(repeat(
-    create_by_comprehension, number=1, repeat=90))
+    create_by_comprehension, number=1, repeat=50))
 print(f"runtime/call: {1000 * time_in_s:.3} ms.")  # Print the result.
