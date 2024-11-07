@@ -1,6 +1,6 @@
-"""Try to measure the performance of list comprehension."""
+"""Measure the runtime of list construction via list comprehension."""
 
-from timeit import timeit  # needed for measuring the runtime
+from timeit import repeat  # needed for measuring the runtime
 
 
 def create_by_comprehension() -> list[int]:
@@ -12,7 +12,9 @@ def create_by_comprehension() -> list[int]:
     return [i for i in range(1_000_001) if i % 2 == 0]
 
 
-# Measure how long 10 executions of create_by_comprehension take in seconds,
-# then divide by 10 to get the time per execution.
-time_in_s: float = timeit(create_by_comprehension, number=10) / 10
-print(f"time in s: {time_in_s}")  # Print the result.
+# Perform 10 repetitions of 1 execution of create_by_comprehension.
+# Obtain the minimum runtime of any execution as the lower bound of how
+# fast this code can run.
+time_in_s: float = min(repeat(
+    create_by_comprehension, number=1, repeat=10))
+print(f"runtime/call: {1000 * time_in_s:.3} ms.")  # Print the result.

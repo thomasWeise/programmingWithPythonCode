@@ -1,6 +1,6 @@
-"""Try to measure the performance of list construction via append."""
+"""Measure the runtime of list construction via the append method."""
 
-from timeit import timeit  # needed for measuring the runtime
+from timeit import repeat  # needed for measuring the runtime
 
 
 def create_by_append() -> list[int]:
@@ -16,7 +16,8 @@ def create_by_append() -> list[int]:
     return numbers
 
 
-# Measure how long 10 executions of create_by_append take in seconds,
-# then divide by 10 to get the time per execution.
-time_in_s: float = timeit(create_by_append, number=10) / 10
-print(f"time in s: {time_in_s}")  # Print the result.
+# Perform 10 repetitions of 1 execution of create_by_append.
+# Obtain the minimum runtime of any execution as the lower bound of how
+# fast this code can run.
+time_in_s: float = min(repeat(create_by_append, number=1, repeat=10))
+print(f"runtime/call: {1000 * time_in_s:.3} ms.")  # Print the result.
