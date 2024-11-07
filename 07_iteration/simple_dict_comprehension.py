@@ -10,6 +10,6 @@ squares_2: dict[int, int] = {i: i ** 2 for i in range(11)}
 print(f"result of comprehension: {squares_2}")  # Print the result.
 
 # Compute the largest divisors of numbers which are not prime.
-maxdiv: dict[int, int] = {k: m for k in range(2, 21)
-                          for m in range(2, k) if k % m == 0}
+maxdiv: dict[int, int] = {k: m for k in range(1, 21)
+                          for m in range(1, k) if k % m == 0}
 print(f"largest divisors of non-primes: {maxdiv}")
