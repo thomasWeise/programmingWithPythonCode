@@ -16,8 +16,8 @@ def create_by_append() -> list[int]:
     return numbers
 
 
-# Perform 10 repetitions of 1 execution of create_by_append.
+# Perform 90 repetitions of 1 execution of create_by_append.
 # Obtain the minimum runtime of any execution as the lower bound of how
 # fast this code can run.
-time_in_s: float = min(repeat(create_by_append, number=1, repeat=10))
+time_in_s: float = min(repeat(create_by_append, number=1, repeat=90))
 print(f"runtime/call: {1000 * time_in_s:.3} ms.")  # Print the result.
