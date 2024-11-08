@@ -19,9 +19,11 @@ def as_str(a: int) -> str:
 
 
 lst: list[str] = [as_str(j) for j in range(3)]
+print("list created")
 print(f"next(iter(lst)): {next(iter(lst))}\n")
 
 gen: Generator[str, None, None] = (as_str(j) for j in range(3))
+print("generator created")
 print(f"next(gen): {next(gen)}")  # Prints input, then prints `"0"`
 print(f"next(gen): {next(gen)}")  # Prints input, then prints `"1"`
 print(f"next(gen): {next(gen)}", flush=True)  # Last print, `"2"`
