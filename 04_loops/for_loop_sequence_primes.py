@@ -11,7 +11,7 @@ for candidate in range(3, 200, 2):  # ...all odd numbers less than 200.
 
     for check in primes[1:]:  # We only test with the odd primes we got.
         if check > limit:  # If the potential divisor is too big, then
-            break  # we can stop the inner loop here.
+            break          # we can stop the inner loop here.
         n_divisions += 1  # Every test requires one modulo division.
         if candidate % check == 0:  # modulo == 0: division without rest
             is_prime = False  # If check divides candidate evenly, then
