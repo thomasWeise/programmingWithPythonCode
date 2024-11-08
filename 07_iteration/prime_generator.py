@@ -26,15 +26,15 @@ def primes() -> Generator[int, None, None]:
     candidate: int = 1  # The current prime candidate
     while True:  # Loop over candidates.
         candidate += 2  # Move to the next odd number as prime candidate
-        is_prime: bool = True  # Let us assume that `candidate` is prime.
-        limit: int = isqrt(candidate)  # Get the maximum possible divisor.
+        is_prime: bool = True  # Let us assume that `candidate` is prime
+        limit: int = isqrt(candidate)  # Get maximum possible divisor.
         for check in found:  # We only test with the odd primes we got.
-            if check > limit:  # If the potential divisor is too big, then
-                break          # we can stop the inner loop here.
-            if candidate % check == 0:  # modulo == 0: division without rest
-                is_prime = False  # If check divides candidate evenly, then
-                break  # candidate is not a prime. We can stop the inner loop.
+            if check > limit:  # If the potential divisor is too big,
+                break          # then we can stop the inner loop here.
+            if candidate % check == 0:  # division without remainder
+                is_prime = False  # check divides candidate evenly, so
+                break  # candidate is not a prime. Stop the inner loop.
 
-        if is_prime:  # If True: no smaller number divides candidate evenly.
+        if is_prime:  # If True: no smaller number divides candidate.
             yield candidate  # Return the prime number as next element.
             found.append(candidate)  # Store candidate in primes list.

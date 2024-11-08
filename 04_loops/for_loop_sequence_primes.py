@@ -14,7 +14,7 @@ for candidate in range(3, 200, 2):  # ...all odd numbers less than 200.
             break          # we can stop the inner loop here.
         n_divisions += 1  # Every test requires one modulo division.
         if candidate % check == 0:  # modulo == 0: division without rest
-            is_prime = False  # If check divides candidate evenly, then
+            is_prime = False  # check divides candidate evenly, so
             break  # candidate is not a prime. We can stop the inner loop.
 
     if is_prime:  # If True: no smaller number divides candidate evenly.
