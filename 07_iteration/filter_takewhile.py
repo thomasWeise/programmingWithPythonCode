@@ -1,9 +1,12 @@
 """Examples for `takewhile` and filter."""
 
-from itertools import takewhile
-from math import isqrt
+from itertools import takewhile  # takes items while a condition is met
+from math import isqrt  # the integer square root
 
-from prime_generator import primes
+from prime_generator import primes  # prime number generator function
+
+less_than_50: list[int] = list(takewhile(lambda z: z < 50, primes()))
+print(f"primes less than 50: {less_than_50}")
 
 
 def sqr_plus_1(x: int) -> bool:
@@ -16,8 +19,6 @@ def sqr_plus_1(x: int) -> bool:
     y: int = isqrt(x)
     return x == (y ** 2) + 1
 
-less_than_50: list[int] = list(takewhile(lambda z: z < 50, primes()))
-print(f"primes less than 50: {less_than_50}")
 
 sqrs_plus_1: list[int] = list(filter(sqr_plus_1, takewhile(
     lambda z: z < 1000, primes())))
