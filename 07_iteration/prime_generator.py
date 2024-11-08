@@ -4,33 +4,31 @@ from math import isqrt
 from typing import Generator
 
 
-def primes(maximum: int) -> Generator[int, None, None]:
+def primes() -> Generator[int, None, None]:
     """
     Provide a sequence of prime numbers.
 
-    :param maximum: the maximum number to consider.
-    :return: the sequence of prime numbers `<= maximum`.
-
-    >>> list(primes(1))
-    []
-    >>> list(primes(2))
-    [2]
-    >>> list(primes(3))
-    [2, 3]
-    >>> list(primes(39))
-    [2, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 27, 29, 31, 33, 37, 39]
+    >>> gen = primes()
+    >>> next(gen)
+    2
+    >>> next(gen)
+    3
+    >>> next(gen)
+    5
+    >>> next(gen)
+    7
+    >>> next(gen)
+    11
     """
-    if maximum <= 1:
-        return  # No prime <= 1.
-    yield 2  # Maximum must be >= 2, so we return `2` as first element.
-    if maximum <= 2:  # Is the maximum already == 2?
-        return  # No further prime in this case.
+    yield 2
 
     found: list[int] = []  # The list of already discovered primes.
-    for candidate in range(3, maximum + 1, 2):  # Loop over candidates.
+    candidate: int = 1  # The current prime candidate
+    while True:  # Loop over candidates.
+        candidate += 2  # Move to the next odd number as prime candidate
         is_prime: bool = True  # Let us assume that `candidate` is prime.
         limit: int = isqrt(candidate)  # Get the maximum possible divisor.
-        for check in found[1:]:  # We only test with the odd primes we got.
+        for check in found:  # We only test with the odd primes we got.
             if check > limit:  # If the potential divisor is too big, then
                 break          # we can stop the inner loop here.
             if candidate % check == 0:  # modulo == 0: division without rest

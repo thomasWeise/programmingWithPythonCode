@@ -3,17 +3,18 @@
 from typing import Generator
 
 
-def multiples_of_37() -> Generator[int, None, None]:
-    """A generator yielding all multiples of 37."""
-    i: int = 1
+def fibonacci() -> Generator[int, None, None]:
+    """A generator returning Fibonacci numbers."""
+    i: int = 0  # Initialize i.
+    j: int = 1  # Initialize j.
     while True:  # Loop forever, i.e., generator can continue forever.
-        yield i * 37  # Yield the multiple.
-        i += 1
+        yield j  # Return the Fibonacci number.
+        i, j = j, i + j  # i = old_j and j = old_i + old_j
 
 
-for a in multiples_of_37():  # Loop over the generated sequence.
-    print(f"a = {a}")  # Print the sequence element.
+for a in fibonacci():  # Loop over the generated sequence.
+    print(a)  # Print the sequence element.
     if a > 300:  # If a > 300, then
         break    # we stop the iteration.
 
-# list(multiples_of_37()) <-- This would fail!!
+# list(fibonacci()) <-- This would fail!!
