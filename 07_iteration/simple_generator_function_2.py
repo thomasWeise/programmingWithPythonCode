@@ -1,6 +1,6 @@
 """A simple example for generator functions."""
 
-from typing import Generator
+from typing import Generator  # The type hint for generators.
 
 
 def fibonacci() -> Generator[int, None, None]:

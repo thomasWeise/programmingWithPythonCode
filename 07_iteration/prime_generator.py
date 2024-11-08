@@ -1,7 +1,7 @@
 """A generator function for prime numbers."""
 
-from math import isqrt
-from typing import Generator
+from math import isqrt  # The integer square root function.
+from typing import Generator  # The type hint for generators.
 
 
 def primes() -> Generator[int, None, None]:
@@ -20,7 +20,7 @@ def primes() -> Generator[int, None, None]:
     >>> next(gen)
     11
     """
-    yield 2
+    yield 2  # The first and only even prime number.
 
     found: list[int] = []  # The list of already discovered primes.
     candidate: int = 1  # The current prime candidate
