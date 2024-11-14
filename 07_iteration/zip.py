@@ -21,5 +21,11 @@ def distance(p1: Iterable[int | float],
 
     >>> distance([100], [10])
     90.0
+
+    >>> try:
+    ...     distance([1, 2, 3], [4, 5])
+    ... except ValueError as ve:
+    ...     print(ve)
+    zip() argument 2 is shorter than argument 1
     """
     return sqrt(sum((a - b) ** 2 for a, b in zip(p1, p2, strict=True)))
