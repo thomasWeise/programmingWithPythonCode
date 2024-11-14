@@ -3,12 +3,13 @@
 # A string with comma-separated values (csv).
 csv_data: str = "12,23,445,3,12,6,-3,5"
 
-# Convert the textual data to a list of int by using `split` and `map`.
-csv_data_as_ints: list[int] = list(map(int, csv_data.split(",")))
-print(f"csv_data_as_ints: {csv_data_as_ints}")
+# Convert the csv data to ints by using `split` and `map`, then filter.
+for k in filter(lambda x: x > 20, map(int, csv_data.split(","))):
+    print(f"found value {k}.")
 
 # Obtain all unique square numbers using `map` and `set`.
-csv_data_sqrs: set[int] = set(map(lambda x: x ** 2, csv_data_as_ints))
+csv_data_sqrs: set[int] = set(map(
+    lambda x: int(x) ** 2, csv_data.split(",")))
 print(f"csv_data_sqrs: {csv_data_sqrs}")
 
 # Get the maximum word length by using `map`, `len`, and `max`.
