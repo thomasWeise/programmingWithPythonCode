@@ -34,3 +34,7 @@ class Polygon(Shape):
                 total.add(previous.distance(current))  # Add length.
                 previous = current  # Current point becomes previous.
         return total.add(previous.distance(first)).value()  # Add last.
+
+    def print(self) -> None:
+        """Print the points of this polygon."""
+        print(", ".join(f"({p.x}, {p.y})" for p in self.points()))
