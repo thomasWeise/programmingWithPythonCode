@@ -7,7 +7,7 @@ A class for triangles.
 12.0
 """
 
-from typing import Final, Iterable
+from typing import Final
 
 from point import Point
 from polygon import Polygon

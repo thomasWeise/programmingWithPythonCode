@@ -10,8 +10,6 @@ The second-order Kahan-Babuška-Neumaier-Summation by Klein.
 1.0
 """
 
-from typing import Iterable
-
 
 class KahanSum:
     """The second-order Kahan-Babuška-Neumaier sum by Klein."""
