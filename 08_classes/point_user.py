@@ -10,6 +10,8 @@ p2: Point = Point(7, 8)  # Create a second point.
 print(f"p2.x = {p2.x}, p2.y = {p2.y}")  # p2.x = 7, p2.y = 8
 print(f"isinstance(p2, Point): {isinstance(p2, Point)}")  # True
 
+print(f"isinstance(5, Point): {isinstance(5, Point)}")  # False
+
 print(f"p1 is p2: {p1 is p2}")  # False
 
 print(f"p1.distance(p2): {p1.distance(p2)}")  # sqrt(4² + 3²) = 5.0
