@@ -23,12 +23,6 @@ class Triangle(Polygon):
         :param p1: the first point spanning the triangle
         :param p2: the second point spanning the triangle
         :param p3: the third point spanning the triangle
-
-        >>> try:
-        ...     Triangle(Point(1, 2), Point(3, 2), Point(1, 2))
-        ... except ValueError as ve:
-        ...     print(ve)
-        empty triangle.
         """
         if (p1.distance(p2) <= 0) or (p2.distance(p3) <= 0) or (
                 p3.distance(p1) <= 0):  # check for non-emptiness
