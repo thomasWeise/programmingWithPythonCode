@@ -33,7 +33,7 @@ class Polygon(Shape):
             else:  # We now have previous != None, so we can add length.
                 total.add(previous.distance(current))  # Add length.
                 previous = current  # Current point becomes previous.
-        return total.add(previous.distance(first)).value()  # Add last.
+        return total.add(previous.distance(first)).result()  # Add last.
 
     def print(self) -> None:
         """Print the points of this polygon."""

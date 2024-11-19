@@ -6,7 +6,7 @@ The second-order Kahan-Babuška-Neumaier-Summation by Klein.
 
 >>> sum([1e36, 1e18, 1, -1e36, -1e18])
 0.0
->>> KahanSum().add(1e36).add(1e18).add(1).add(-1e36).add(-1e18).value()
+>>> KahanSum().add(1e36).add(1e18).add(1).add(-1e36).add(-1e18).result()
 1.0
 """
 
@@ -43,7 +43,7 @@ class KahanSum:
         self.__ccs += cc  # Update the second-order correction.
         return self  # Return `self` so that we can chain calls.
 
-    def value(self) -> int | float:
+    def result(self) -> int | float:
         """
         Get the current result of the summation.
 
