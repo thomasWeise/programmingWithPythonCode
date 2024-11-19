@@ -1,4 +1,4 @@
-"""Examples for using out class :class:`Point`."""
+"""Examples for using our class :class:`Point`."""
 
 from point import Point
 
