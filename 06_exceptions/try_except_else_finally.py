@@ -9,7 +9,7 @@ def divide_and_print(a: int | float, b: int | float) -> None:
     :param b: the divisor
     """
     try:  # We try to do some computation that may cause an Exception.
-        print(f"{a} / {b} = {a / b}", flush=True)  # Divide and print.
+        print(f"{a / b = }", flush=True)  # Divide and print.
     except ZeroDivisionError as zd:  # Is b == 0 ?
         print(f"We got a ZeroDivisionError when doing {a} / {b}: {zd}.")
     except TypeError as te:  # Has one of the values the wrong type?

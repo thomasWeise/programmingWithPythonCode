@@ -4,7 +4,7 @@ print(type(int_var))  # This prints "<class 'int'>".
 float_var: float = 3.0  # 3.0 is a float and it is stored in float_var.
 print(type(float_var))  # This prints "<class 'float'>".
 
-str_var: str = f"float_var={float_var}"  # Render an f-string.
+str_var: str = f"{float_var = }"  # Render an f-string.
 print(type(str_var))  # This prints "<class 'str'>".
 
 bool_var: bool = (1 == 0)  # 1 == 0 is False, so a bool is stored.
