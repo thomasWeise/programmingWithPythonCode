@@ -1,4 +1,4 @@
-"""A simple class for a point."""
+"""A simple class for points."""
 
 from math import isfinite, sqrt
 from typing import Final
