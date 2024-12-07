@@ -1,6 +1,6 @@
 """A simple class for points, without any dunder methods."""
 
-from math import isfinite, sqrt
+from math import isfinite
 from typing import Final
 
 
