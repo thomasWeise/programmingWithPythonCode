@@ -11,7 +11,7 @@ print(the_string)  # This is identical to `print(str(the_string))`.
 print(repr(the_string))  # Notice the added `'` around the string.
 
 l1: list[int] = [1, 2, 3]  # A list of integers.
-l2: list[str] = ['1', '2', '3']  # A list of strings.
+l2: list[str] = ["1", "2", "3"]  # A list of strings.
 print(f"{l1 = }, but {l2 = }")  # str(list) uses repr for list elements.
 
 # Get the date and time when this program was run.
