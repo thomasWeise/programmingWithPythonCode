@@ -1,4 +1,4 @@
-"""Examples for using our class :class:`Point`."""
+"""Examples for using our class :class:`Point` with dunder methods."""
 
 from point_with_dunder import Point
 
