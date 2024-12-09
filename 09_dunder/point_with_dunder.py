@@ -1,6 +1,7 @@
-"""A class for points, improved with dunder methods."""
+"""A class for points, with string and equals dunder methods."""
 
 from math import isfinite
+from types import NotImplementedType
 from typing import Final
 
 
@@ -43,7 +44,7 @@ class Point:
         """
         return f"({self.x},{self.y})"
 
-    def __eq__(self, other) -> bool:
+    def __eq__(self, other) -> bool | NotImplementedType:
         """
         Check whether this point is equal to another object.
 
@@ -56,5 +57,5 @@ class Point:
         >>> Point(1, 2) == Point(1, 2)
         True
         """
-        return isinstance(other, Point) and (
-                other.x == self.x) and (other.y == self.y)
+        return (other.x == self.x) and (other.y == self.y) \
+            if isinstance(other, Point) else NotImplemented
