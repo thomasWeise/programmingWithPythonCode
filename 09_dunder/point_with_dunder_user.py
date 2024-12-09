@@ -17,3 +17,5 @@ print(f"{(p1 == p2) = }")  # False, calls our `__eq__` method
 print(f"{(p1 == p3) = }")  # True, as it should be, because of `__eq__`
 print(f"{(p1 != p2) = }")  # True, returns `not __eq__`
 print(f"{(p1 != p3) = }")  # False, as it should be
+
+print(f"{(p1 == 5) = }")  # comparison with the integer 5 yields False

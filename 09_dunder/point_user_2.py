@@ -17,3 +17,5 @@ print(f"{(p1 == p2) = }")  # False, because without dunder `==` = `is`
 print(f"{(p1 == p3) = }")  # False, but should ideally be True
 print(f"{(p1 != p2) = }")  # True, because without dunder `==` = `is`
 print(f"{(p1 != p3) = }")  # True, but should ideally be False
+
+print(f"{(p1 == 5) = }")  # comparison with the integer 5 yields False
