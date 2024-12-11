@@ -19,6 +19,6 @@ print(f"{Point(3.1, 5) in points = }")  # False: point is not in the set
 
 # A dictionary with points as keys.
 point_vals: dict[Point, str] = {p1: "A", p2: "B"}
-print(f"{point_vals = }")  #  {Point(3, 5): 'A', Point(7, 8): 'B'
+print(f"{point_vals = }")  #  {Point(3, 5): 'A', Point(7, 8): 'B'}
 point_vals[Point(7, 9)] = "C"  # Put a new point/string-item in the dict
 print(f"{point_vals = }")  # Now there are three items.

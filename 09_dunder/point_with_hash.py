@@ -35,8 +35,8 @@ class Point:
         Check whether this point is equal to another object.
 
         :param other: the other object
-        :return: `True` if and only if `other` is also a point and has
-            the same coordinates
+        :return: `True` if and only if `other` is also a `Point` and has
+            the same coordinates; `NotImplemented` if it is not a point
         """
         return (other.x == self.x) and (other.y == self.y) \
             if isinstance(other, Point) else NotImplemented

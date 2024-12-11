@@ -19,7 +19,7 @@ def sqrt(number: float) -> float:
     Compute the square root of a given `number`.
 
     :param number: The number to compute the square root of.
-    :return: A value `v` such that `v * v == number`.
+    :return: A value `v` such that `v * v` is approximately `number`.
     """
     guess: float = 1.0  # This will hold the current guess.
     old_guess: float = 0.0  # 0.0 is just a dummy value != guess.

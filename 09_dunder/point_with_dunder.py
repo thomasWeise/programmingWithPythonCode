@@ -49,8 +49,8 @@ class Point:
         Check whether this point is equal to another object.
 
         :param other: the other object
-        :return: `True` if and only if `other` is also a point and has
-            the same coordinates
+        :return: `True` if and only if `other` is also a `Point` and has
+            the same coordinates; `NotImplemented` if it is not a point
 
         >>> Point(1, 2) == Point(2, 3)
         False

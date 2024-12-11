@@ -8,7 +8,7 @@ def sqrt(number: float) -> float:
     Compute the square root of a given `number`.
 
     :param number: The number to compute the square root of.
-    :return: A value `v` such that `v * v == number`.
+    :return: A value `v` such that `v * v` is approximately `number`.
     """
     if number <= 0.0:  # Fix for the special case `0`:
         return 0.0  # We return 0; for now, we ignore negative values.
