@@ -213,7 +213,7 @@ class Fraction:
         return f"Fraction({self.a}, {self.b})"
 # end part_5
 
-# end part_6
+# start part_6
     def decimal_str(self, max_frac: int = 100) -> str:
         """
         Convert the fraction to decimal string.
