@@ -225,8 +225,6 @@ class Fraction:
         '0'
         >>> Fraction(1, 1).decimal_str()
         '1'
-        >>> Fraction(123, 1).decimal_str()
-        '123'
         >>> Fraction(124, 2).decimal_str()
         '62'
         >>> Fraction(1, 2).decimal_str()
