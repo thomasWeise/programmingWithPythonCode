@@ -223,8 +223,6 @@ class Fraction:
 
         >>> Fraction(0, 1).decimal_str()
         '0'
-        >>> Fraction(1, 1).decimal_str()
-        '1'
         >>> Fraction(124, 2).decimal_str()
         '62'
         >>> Fraction(1, 2).decimal_str()
@@ -235,8 +233,10 @@ class Fraction:
         '0.142857142857142857142857142857142857142857142857142857142857'
         >>> Fraction(101001, 100000000).decimal_str()
         '0.00101001'
-        >>> Fraction(99995, 100000).decimal_str(3)
-        '1'
+        >>> Fraction(1235, 1000).decimal_str(2)
+        '1.24'
+        >>> Fraction(91995, 100000).decimal_str(3)
+        '0.92'
         >>> Fraction(99995, 100000).decimal_str(4)
         '1'
         >>> Fraction(99995, 100000).decimal_str(5)
