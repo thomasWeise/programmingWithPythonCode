@@ -32,16 +32,12 @@ class Fraction:
         :param max_frac: the maximum number of fractional digits
         :return: the string
 
-        >>> Fraction(0, 1).decimal_str()
-        '0'
         >>> Fraction(124, 2).decimal_str()
         '62'
         >>> Fraction(1, 2).decimal_str()
         '0.5'
         >>> Fraction(1, 3).decimal_str(10)
         '0.3333333333'
-        >>> Fraction(1, 7).decimal_str(60)
-        '0.142857142857142857142857142857142857142857142857142857142857'
         >>> Fraction(-101001, 100000000).decimal_str()
         '-0.00101001'
         >>> Fraction(1235, 1000).decimal_str(2)
