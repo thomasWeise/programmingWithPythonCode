@@ -16,18 +16,18 @@ class Fraction:
         :param a: the numerator
         :param b: the denominator
 
-        >>> print(Fraction(12, 1))
-        12
-        >>> print(Fraction(12, 2))
-        6
-        >>> print(Fraction(2, 12))
-        1/6
-        >>> print(Fraction(2, -12))
-        -1/6
-        >>> print(Fraction(-2, -12))
-        1/6
-        >>> print(Fraction(-2, 12))
-        -1/6
+        >>> f"{Fraction(12, 1).a}, {Fraction(12, 1).b}"
+        '12, 1'
+        >>> f"{Fraction(12, 2).a}, {Fraction(12, 2).b}"
+        '6, 1'
+        >>> f"{Fraction(2, 12).a}, {Fraction(2, 12).b}"
+        '1, 6'
+        >>> f"{Fraction(2, -12).a}, {Fraction(2, -12).b}"
+        '-1, 6'
+        >>> f"{Fraction(-2, -12).a}, {Fraction(-2, -12).b}"
+        '1, 6'
+        >>> f"{Fraction(-2, 12).a}, {Fraction(-2, 12).b}"
+        '-1, 6'
         >>> try:
         ...     Fraction(1, 0)
         ... except ZeroDivisionError as z:
@@ -45,6 +45,34 @@ class Fraction:
 # end part_1
 
 # start part_2
+    def __str__(self) -> str:
+        """
+        Convert this number to a string fractional.
+
+        :return: the string representation
+
+        >>> print(Fraction(-5, 12))
+        -5/12
+        >>> print(Fraction(12, 23))
+        12/23
+        """
+        return str(self.a) if self.b == 1 else f"{self.a}/{self.b}"
+
+    def __repr__(self) -> str:
+        """
+        Convert this number to a string.
+
+        :return: the string representation
+
+        >>> Fraction(-5, 12)
+        Fraction(-5, 12)
+        >>> Fraction(12, 23)
+        Fraction(12, 23)
+        """
+        return f"Fraction({self.a}, {self.b})"
+# end part_2
+
+# start part_3
     def __add__(self, other) -> Union[NotImplementedType, "Fraction"]:
         """
         Add this fraction to another fraction.
@@ -80,9 +108,9 @@ class Fraction:
         return Fraction(
             (self.a * other.b) - (other.a * self.b), self.b * other.b)\
             if isinstance(other, Fraction) else NotImplemented
-# end part_2
+# end part_3
 
-# start part_3
+# start part_4
     def __mul__(self, other) -> Union[NotImplementedType, "Fraction"]:
         """
         Multiply this fraction with another fraction.
@@ -121,9 +149,9 @@ class Fraction:
         3/5
         """
         return self if self.a > 0 else Fraction(-self.a, self.b)
-# end part_3
+# end part_4
 
-# start part_4
+# start part_5
     def __eq__(self, other) -> bool | NotImplementedType:
         """
         Check whether this fraction equals another fraction.
@@ -183,34 +211,6 @@ class Fraction:
         """
         return ((self.a * other.b) >= (other.a * self.b)) \
             if isinstance(other, Fraction) else NotImplemented
-# end part_4
-
-# start part_5
-    def __str__(self) -> str:
-        """
-        Convert this number to a string fractional.
-
-        :return: the string representation
-
-        >>> print(Fraction(-5, 12))
-        -5/12
-        >>> print(Fraction(12, 23))
-        12/23
-        """
-        return str(self.a) if self.b == 1 else f"{self.a}/{self.b}"
-
-    def __repr__(self) -> str:
-        """
-        Convert this number to a string.
-
-        :return: the string representation
-
-        >>> Fraction(-5, 12)
-        Fraction(-5, 12)
-        >>> Fraction(12, 23)
-        Fraction(12, 23)
-        """
-        return f"Fraction({self.a}, {self.b})"
 # end part_5
 
 # start part_6
