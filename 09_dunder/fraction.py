@@ -237,8 +237,8 @@ class Fraction:
         '0.3333333333'
         >>> Fraction(1, 7).decimal_str(60)
         '0.142857142857142857142857142857142857142857142857142857142857'
-        >>> Fraction(101001, 100000000).decimal_str()
-        '0.00101001'
+        >>> Fraction(-101001, 100000000).decimal_str()
+        '-0.00101001'
         >>> Fraction(1235, 1000).decimal_str(2)
         '1.24'
         >>> Fraction(91995, 100000).decimal_str(3)
@@ -253,6 +253,9 @@ class Fraction:
         a: int = self.a  # Get the numerator.
         if a == 0:  # If the fraction is 0, we return 0.
             return "0"
+        sign: bool = a < 0  # Get the sign of the fraction.
+        if sign:    # If the fraction is negative...
+            a = -a  # ...then we treat it as positive, later insert `-`.
         b: int = self.b  # Get the denominator.
 
         digits: list = []  # A list for collecting digits.
@@ -261,24 +264,24 @@ class Fraction:
             a = 10 * (a % b)  # Ten times the remainder -> next digit.
 
         if (a // b) >= 5:  # Do we need to round up?
-            carry: int = 1  # We need to increment the very last digit.
             # This may lead to other digits topple over, e.g., 0.999...
-            for i in range(len(digits) - 1, 0, -1):
-                carry = digits[i] + carry  # Increment current digit.
-                digits[i] = carry % 10  # The new digit value.
-                carry //= 10  # Will be 1 if digit was 9, else 0.
-                if carry == 0:  # We can stop here.
-                    break
-            if carry > 0:  # First number is special: it can be > 9.
-                digits[0] += carry  # So we add carry without % 10.
+            for i in range(len(digits) - 1, 0, -1):  # except first!
+                digits[i] += 1  # Increment the digit at position i.
+                if digits[i] != 10:  # Was there no overflow?
+                    break  # Digits in 1..9, no overflow, we can stop.
+                digits[i] = 0  # We got a `10`, so we set it to 0.
+            else:  # This is only reached if no `break` was done.
+                digits[0] += 1  # Increment the integer part.
 
         while digits[-1] == 0:  # Remove all trailing zeros.
             del digits[-1]  # Delete the trailing zero.
 
-        if len(digits) <= 1:  # Only one single digit?
-            return str(digits[0])  # So we return an integer.
+        if len(digits) <= 1:  # Do we only have an integer part?
+            return str((-1 if sign else 1) * digits[0])  # return int
 
         digits.insert(1, ".")  # Multiple digits: Insert a decimal dot.
+        if sign:  # Do we need to restore the sign?
+            digits.insert(0, "-")  # Insert the sign at the beginning.
         return "".join(map(str, digits))  # Join all digits to a string.
 # end part_6
 # start part_1

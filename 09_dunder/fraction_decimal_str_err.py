@@ -42,8 +42,8 @@ class Fraction:
         '0.3333333333'
         >>> Fraction(1, 7).decimal_str(60)
         '0.142857142857142857142857142857142857142857142857142857142857'
-        >>> Fraction(101001, 100000000).decimal_str()
-        '0.00101001'
+        >>> Fraction(-101001, 100000000).decimal_str()
+        '-0.00101001'
         >>> Fraction(1235, 1000).decimal_str(2)
         '1.24'
         >>> Fraction(91995, 100000).decimal_str(3)
@@ -58,6 +58,9 @@ class Fraction:
         a: int = self.a  # Get the numerator.
         if a == 0:  # If the fraction is 0, we return 0.
             return "0"
+        sign: bool = a < 0  # Get the sign of the fraction.
+        if sign:    # If the fraction is negative...
+            a = -a  # ...then we treat it as positive, later insert `-`.
         b: int = self.b  # Get the denominator.
 
         digits: list = []  # A list for collecting digits.
@@ -66,11 +69,13 @@ class Fraction:
             a = 10 * (a % b)  # Ten times the remainder -> next digit.
 
         if (a // b) >= 5:  # Do we need to round up?
-            digits[-1] += 1  # Increment last digit.
+            digits[-1] += 1  # Round up by incrementing last digit.
 
-        if len(digits) <= 1:  # Only one single digit?
-            return str(digits[0])  # So we return an integer.
+        if len(digits) <= 1:  # Do we only have an integer part?
+            return str((-1 if sign else 1) * digits[0])  # return int
 
         digits.insert(1, ".")  # Multiple digits: Insert a decimal dot.
+        if sign:  # Do we need to restore the sign?
+            digits.insert(0, "-")  # Insert the sign at the beginning.
         return "".join(map(str, digits))  # Join all digits to a string.
 # end part_6
