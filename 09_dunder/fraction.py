@@ -249,9 +249,8 @@ class Fraction:
         a: int = self.a  # Get the numerator.
         if a == 0:  # If the fraction is 0, we return 0.
             return "0"
-        sign: bool = a < 0  # Get the sign of the fraction.
-        if sign:    # If the fraction is negative...
-            a = -a  # ...then we treat it as positive, later insert `-`.
+        negative: bool = a < 0  # Get the sign of the fraction.
+        a = abs(a)  # Make sure that a is now positive.
         b: int = self.b  # Get the denominator.
 
         digits: list = []  # A list for collecting digits.
@@ -273,10 +272,10 @@ class Fraction:
             del digits[-1]  # Delete the trailing zero.
 
         if len(digits) <= 1:  # Do we only have an integer part?
-            return str((-1 if sign else 1) * digits[0])  # return int
+            return str((-1 if negative else 1) * digits[0])
 
         digits.insert(1, ".")  # Multiple digits: Insert a decimal dot.
-        if sign:  # Do we need to restore the sign?
+        if negative:  # Do we need to restore the sign?
             digits.insert(0, "-")  # Insert the sign at the beginning.
         return "".join(map(str, digits))  # Join all digits to a string.
 # end part_6
