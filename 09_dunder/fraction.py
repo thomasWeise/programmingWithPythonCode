@@ -55,6 +55,8 @@ class Fraction:
 
         >>> print(Fraction(-5, 12))
         -5/12
+        >>> print(Fraction(3, -1))
+        -3
         >>> print(Fraction(12, 23))
         12/23
         """
@@ -68,6 +70,8 @@ class Fraction:
 
         >>> Fraction(-5, 12)
         Fraction(-5, 12)
+        >>> Fraction(3, -1)
+        Fraction(-3, 1)
         >>> Fraction(12, 23)
         Fraction(12, 23)
         """
