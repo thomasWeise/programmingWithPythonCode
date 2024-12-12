@@ -28,6 +28,8 @@ class Fraction:
         '1, 6'
         >>> f"{Fraction(-2, 12).a}, {Fraction(-2, 12).b}"
         '-1, 6'
+        >>> f"{Fraction(0, -9).a}, {Fraction(0, -9).b}"
+        '0, 1'
         >>> try:
         ...     Fraction(1, 0)
         ... except ZeroDivisionError as z:
