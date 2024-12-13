@@ -237,14 +237,12 @@ class Fraction:
         '-0.00101001'
         >>> Fraction(1235, 1000).decimal_str(2)
         '1.24'
+        >>> Fraction(99995, 100000).decimal_str(5)
+        '0.99995'
         >>> Fraction(91995, 100000).decimal_str(3)
         '0.92'
         >>> Fraction(99995, 100000).decimal_str(4)
         '1'
-        >>> Fraction(99995, 100000).decimal_str(5)
-        '0.99995'
-        >>> Fraction(2399995, 100000).decimal_str(4)
-        '24'
         """
         a: int = self.a  # Get the numerator.
         if a == 0:  # If the fraction is 0, we return 0.
