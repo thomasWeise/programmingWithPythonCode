@@ -52,11 +52,11 @@ class Fraction:
         a: int = self.a  # Get the numerator.
         if a == 0:  # If the fraction is 0, we return 0.
             return "0"
-        negative: bool = a < 0  # Get the sign of the fraction.
-        a = abs(a)  # Make sure that a is now positive.
-        b: int = self.b  # Get the denominator.
+        negative: Final[bool] = a < 0  # Get the sign of the fraction.
+        a = abs(a)  # Make sure that `a` is now positive.
+        b: Final[int] = self.b  # Get the denominator.
 
-        digits: list = []  # A list for collecting digits.
+        digits: Final[list] = []  # A list for collecting digits.
         while (a != 0) and (len(digits) <= max_frac):  # Create digits.
             digits.append(a // b)  # Add the current digit.
             a = 10 * (a % b)  # Ten times the remainder -> next digit.
