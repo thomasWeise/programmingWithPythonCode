@@ -33,6 +33,8 @@ def sqrt(number: Fraction, max_steps: int = 10) -> Fraction:
 87954454749246185695364864449241044320771344947049565846788509874339442\
 21254487706647809158846074998871240076521705751797883416625624940758907'
     """
+    if number < ZERO:  # No negative numbers are permitted.
+        raise ValueError(f"Cannot computed sqrt({number}).")
     guess: Fraction = ONE       # This will hold the current guess.
     old_guess: Fraction = ZERO  # 0.0 is just a dummy value != guess.
     while old_guess != guess:  # Repeat until nothing changes anymore.
