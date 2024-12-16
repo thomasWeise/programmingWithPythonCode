@@ -1,7 +1,7 @@
 """Use the `try-finally` statement to write to and read from a file."""
 
 from os import remove  # Needed to delete a file.
-from typing import Final, IO
+from typing import IO, Final
 
 # We open the text file "example.txt" for writing.
 stream_out: Final[IO] = open("example.txt", mode="w", encoding="UTF-8")
