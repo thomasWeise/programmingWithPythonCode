@@ -1,7 +1,7 @@
 # start part_1
 """An API for XML output via context managers and `with`."""
 
-from typing import Any, Callable, Final, Literal, Mapping, Self
+from typing import Any, Callable, Final, Literal, Self
 
 #: An internal mapping for escaping reserved XML characters.
 _ESC: Final = str.maketrans({"<": "&#38;", ">": "&#62;", "'": "&#39;"})
@@ -11,7 +11,7 @@ class Element:
     """An XML element. XML elements can be nested arbitrarily deeply."""
 
     def __init__(self, dest: Callable[[str], Any],
-                 name: str, attrs: Mapping[str, Any] | None = None,
+                 name: str, attrs: dict[str, Any] | None = None,
                  is_root: bool = True) -> None:
         """
         Create the XML element.
@@ -58,7 +58,7 @@ class Element:
 
 # start part_2
     def element(self, name: str,
-                attrs: Mapping[str, Any] | None = None) -> "Element":
+                attrs: dict[str, Any] | None = None) -> "Element":
         """
         Create a new XML Element inside this element.
 

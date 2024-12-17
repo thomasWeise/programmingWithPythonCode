@@ -1,6 +1,6 @@
 """Use our simple XML output API to write XML data to a file."""
 
-from os import remove
+from os import remove  # The function for deleting the file at the end.
 
 from xml_context import Element  # import our XML output API
 
