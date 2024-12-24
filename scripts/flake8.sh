@@ -19,7 +19,7 @@ for flake in "flake8" "flake8-bugbear" "flake8-eradicate" "flake8-use-fstring" "
   if [ -z "$infos" ]; then
     # flake8 or the plugin is not installed, so we install it now.
     # We do this silently, without printing any information...
-    python3 -m pip install "$flake" 1>/dev/null 2>&1
+    python3 -m pip install --require-virtualenv "$flake" 1>/dev/null 2>&1
     infos="$(python3 -m pip show "$flake" 2>/dev/null)"
   fi
 

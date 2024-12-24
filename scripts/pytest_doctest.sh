@@ -19,7 +19,7 @@ for pack in "pytest" "pytest-timeout"; do
   if [ -z "$infos" ]; then
     # pytest or the plugin is not installed, so we install it now.
     # We do this silently, without printing any information...
-    python3 -m pip install "$pack" 1>/dev/null 2>&1
+    python3 -m pip install --require-virtualenv "$pack" 1>/dev/null 2>&1
     infos="$(python3 -m pip show "$pack" 2>/dev/null)"
   fi
 

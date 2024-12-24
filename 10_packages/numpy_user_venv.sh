@@ -11,7 +11,7 @@ echo "# Any Python program now uses the activated virtual environment."
 source .venv/bin/activate
 
 echo "# We install the package 'numpy' into the virtual environment."
-pip install numpy
+pip install --require-virtualenv --progress-bar off numpy
 
 echo "# 'numpy' is now available for Python programs."
 echo "$ python3 numpy_user.py"

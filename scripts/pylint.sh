@@ -17,7 +17,7 @@ infos="$(python3 -m pip show pylint 2>/dev/null || true)"
 if [ -z "$infos" ]; then
   # pylint is not installed, so we install it now.
   # We do this silently, without printing any information...
-  python3 -m pip install pylint 1>/dev/null 2>&1
+  python3 -m pip install --require-virtualenv pylint 1>/dev/null 2>&1
   infos="$(python3 -m pip show pylint 2>/dev/null)"
 fi
 # We now extract the version of pylint from the information string.

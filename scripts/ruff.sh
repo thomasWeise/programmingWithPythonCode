@@ -12,12 +12,12 @@ set -o errtrace  # trace errors through commands and functions
 set -o nounset   # exit if encountering an uninitialized variable
 set -o errexit   # exit if any statement returns a non-0 return value
 
-# Check if ruff is installed. If yes, get its version. If no, install it.
+# Check if ruff is installed. If yes, get its version. If no, install.
 infos="$(python3 -m pip show ruff 2>/dev/null || true)"
 if [ -z "$infos" ]; then
   # ruff is not installed, so we install it now.
   # We do this silently, without printing any information...
-  python3 -m pip install ruff 1>/dev/null 2>&1
+  python3 -m pip install --require-virtualenv ruff 1>/dev/null 2>&1
   infos="$(python3 -m pip show ruff 2>/dev/null)"
 fi
 # We now extract the version of ruff from the information string.
