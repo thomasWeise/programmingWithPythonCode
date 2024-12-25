@@ -4,10 +4,17 @@ Here we provide all the example programs and codes for our book "[Programming wi
 
 ## 1. Structure
 
-1. A [Very First Project](../../tree/main/00_veryFirstProject)
-2. [Variables](../..tree/main/01_variables)
-3. [Collections](../..tree/main/02_collections)
-4. [Scripts](../..tree/main/scripts)
+1. A [Very First Project](../../tree/main/veryFirstProject)
+2. [Variables](../..tree/main/variables)
+3. [Collections](../..tree/main/collections)
+4. [Conditionals](../..tree/main/conditionals)
+5. [Loops](../..tree/main/loops)
+6. [Functions](../..tree/main/functions)
+7. [Exceptions](../..tree/main/exceptions)
+8. [Iteration](../..tree/main/iteration)
+9. [Classes](../..tree/main/classes)
+10. [Packages](../..tree/main/packages)
+11. [Scripts](../..tree/main/_scripts_)
 
 ## 2. License
 Copyright (C) 2023-2024 [Thomas Weise](http://iao.hfuu.edu.cn/5) (汤卫思教授)
