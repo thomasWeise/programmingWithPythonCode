@@ -1,5 +1,3 @@
-#!/bin/bash -
-
 echo "# We create the directory '.venv' for the virtual environment."
 mkdir -p .venv
 
