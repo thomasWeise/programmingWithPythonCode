@@ -6,7 +6,7 @@
 3.3 ** 0.5    # square root of 3.3
 ((3.4 * 5.5) - 1.2) ** (4.4 / 3.3)
 from math import pi, e   # import some mathematical constants
-pi            # π
+pi
 e             # Euler's Number
 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1
 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 - 1.0
