@@ -47,7 +47,8 @@ for line in lines:  # we go over the lines to collect statements
             run(cur)  # execute all collected statements
         print(f"{NEW_STATEMENT}{line}")  # print code line
         cur.append(line)
-    else:  # no code and nothing forbidden
+    else:  # no code: ends last block of code
+        run(cur)
         print()  # print an empty line
 
 run(cur)  # Execute left-over statements
