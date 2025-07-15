@@ -1,7 +1,7 @@
 print("\"Hello World!\"")
 print("\'Hello World\'")
 print("\\")
-print("\"\'\\\"")
+print("\"\'\\\"\"")
 
 print("Hello\nWorld!")
 print("Hello\r\nWorld!")
