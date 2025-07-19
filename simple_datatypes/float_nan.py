@@ -4,6 +4,7 @@ inf - 1e300
 inf - inf
 inf / 1e300
 inf / inf
+0 * inf
 
 from math import nan
 nan + 1
