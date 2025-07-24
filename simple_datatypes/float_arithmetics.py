@@ -24,5 +24,5 @@ log(e ** 10)          # Sometimes, we get exact results, though.
 
 from math import asin, acos, atan    # inverse trigonometric ops
 asin(sin(0.925))      # Often, we cannot exactly invert operations.
-acos(cos(-0.3))
-atan(tan(1))
+acos(cos(-0.3))       # and get results which are close to what we
+atan(tan(1))          # expect. But sometimes we get exact results.
