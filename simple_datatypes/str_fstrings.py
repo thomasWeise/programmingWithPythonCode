@@ -12,7 +12,7 @@ f"pi is approximately {pi}."
 f"pi rounded to two decimals is {pi:.2f}."
 
 f"1/321 as percentage with 2 decimals is {1/321:.2%}."
-f"1.2345533e6 with thousand separator and 1 decimal is {1.2345533e6:,.1f}."
+f"1.2345533e4 with thousand separator and 1 decimal is {1.2345533e4:,.1f}."
 
 from math import sin
 f"sin(0.25pi) is approximately {sin(0.25*pi):.5f}."
@@ -22,3 +22,5 @@ f"Single braces without expression: {{ and }}."
 
 f"{5 + 4 = }"
 f"{23 * sin(2 - 5) = }"
+
+f"{1 < 5} is True and {1 + 5} = 6."  # The last str function example
