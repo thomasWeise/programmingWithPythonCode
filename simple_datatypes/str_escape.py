@@ -5,7 +5,7 @@ print('A double quotation mark: "')   # "other" quotation mark...
 print("A single (') and a double (\") quotation mark.")
 
 print("\"Hello World!\"")  # We simply put a backslash (\) before
-print("\'Hello World\'")   # the forbidden character.
+print('\'Hello World\'')   # the forbidden character.
 print("\\")                # Backslashes are escaped like this, too.
 print("\"\'\\\"\"")        # This becomes "'\""
 
