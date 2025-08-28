@@ -27,4 +27,4 @@ print(f"cpy is numbers: {cpy is numbers}.")  # No, `cpy is not numbers`.
 del cpy[0]  # We change `cpy`, but `numbers` remains unchanged.
 print(f"cpy == numbers: {cpy == numbers}.")  # Now, `cpy != numbers`.
 print(f"cpy is numbers: {cpy is numbers}.")  # And `cpy is not numbers`.
-print(f"cpy is not numbers: {cpy is not numbers}.")  # indeed, it is not.
+print(f"cpy is not numbers: {cpy is not numbers}.")  # indeed, it is not
