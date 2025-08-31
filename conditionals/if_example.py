@@ -9,11 +9,11 @@ The Boolean statements can be combined with `and` and `or` and grouped
 using parentheses.
 """
 
-year: int = 2024  # the year 2024 should be a leap year
+year: int = 2024  # The year 2024 should be a leap year.
 if (((year % 4) == 0) and ((year % 100) != 0)) or ((year % 400) == 0):
     print(f"{year} is a leap year.")  # This line will be executed.
 
-year = 1900  # the year 1900 is not a leap year
+year = 1900       # The year 1900 is not a leap year.
 if (((year % 4) == 0) and ((year % 100) != 0)) or ((year % 400) == 0):
     print(f"{year} is a leap year.")  # This line is never reached.
 

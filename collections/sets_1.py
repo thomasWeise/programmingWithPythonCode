@@ -9,7 +9,7 @@ upper.add("Z")  # The letter "Z" is already in the set.
 print(f"some more uppercase letters are: {upper}")  # Print the set.
 
 upper.update(["K", "G", "W", "Q", "W"])  # Try to add 5 letters.
-print(f"even uppercase letters are: {upper}")  # Print the set.
+print(f"even more uppercase letters are: {upper}")  # Print the set.
 
 lower_tuple: tuple[str, ...] = ("b", "i", "j", "c", "t", "i")
 lower: set[str] = set(lower_tuple)  # Convert a tuple to a set.
