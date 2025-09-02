@@ -1,6 +1,7 @@
 """Testing the square root implementation that does not raise errors."""
 
-from pytest import raises
+from math import isclose   # Checks if two float numbers are similar.
+from pytest import raises  # Expects that a certain Exception is raised.
 
 
 def sqrt(number: float) -> float:
@@ -12,10 +13,10 @@ def sqrt(number: float) -> float:
     """
     if number <= 0.0:  # Fix for the special case `0`:
         return 0.0  # We return 0; for now, we ignore negative values.
-    guess: float = 1.0  # This will hold the current guess.
+    guess: float = 1.0      # This will hold the current guess.
     old_guess: float = 0.0  # 0.0 is just a dummy value != guess.
-    while old_guess != guess:  # Repeat until nothing changes anymore.
-        old_guess = guess  # The current guess becomes the old guess.
+    while not isclose(old_guess, guess):   # Repeat until no change.
+        old_guess = guess   # The current guess becomes the old guess.
         guess = 0.5 * (guess + number / guess)  # The new guess.
     return guess
 

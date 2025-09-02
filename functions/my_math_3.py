@@ -1,6 +1,7 @@
 """A third version of our module with mathematics routines."""
 
-from math import isfinite
+from math import isclose   # Checks if two float numbers are similar.
+from math import isfinite  # Checks whether a number is NOT nan or inf.
 
 # factorial is omitted here for brevity
 
@@ -17,9 +18,9 @@ def sqrt(number: float) -> float:
     if not isfinite(number):  # Fix for case `+inf` and `nan`:
         return number  # We return `inf` for `inf` and `nan` for `nan`.
 
-    guess: float = 1.0  # This will hold the current guess.
+    guess: float = 1.0      # This will hold the current guess.
     old_guess: float = 0.0  # 0.0 is just a dummy value != guess.
-    while old_guess != guess:  # Repeat until nothing changes anymore.
-        old_guess = guess  # The current guess becomes the old guess.
+    while not isclose(old_guess, guess):   # Repeat until no change.
+        old_guess = guess   # The current guess becomes the old guess.
         guess = 0.5 * (guess + number / guess)  # The new guess.
     return guess

@@ -1,5 +1,6 @@
 """A `sqrt` function raising an error if its result is not finite."""
 
+from math import isclose   # Checks if two float numbers are similar.
 from math import isfinite  # A function that checks for `inf` and `nan`.
 
 
@@ -14,13 +15,11 @@ def sqrt(number: float) -> float:
     if (not isfinite(number)) or (number < 0.0):  # raise error
         raise ArithmeticError(f"sqrt({number}) is not permitted.")
     if number <= 0.0:  # Fix for the special case `0`:
-        return 0.0  # We return 0; for now, we ignore negative values.
-    if not isfinite(number):  # Fix for case `+inf` and `nan`:
-        return number  # We return `inf` for `inf` and `nan` for `nan`.
+        return 0.0  # We return 0, negative values were checked above.
 
-    guess: float = 1.0  # This will hold the current guess.
+    guess: float = 1.0      # This will hold the current guess.
     old_guess: float = 0.0  # 0.0 is just a dummy value != guess.
-    while old_guess != guess:  # Repeat until nothing changes anymore.
-        old_guess = guess  # The current guess becomes the old guess.
+    while not isclose(old_guess, guess):   # Repeat until no change.
+        old_guess = guess   # The current guess becomes the old guess.
         guess = 0.5 * (guess + number / guess)  # The new guess.
     return guess
