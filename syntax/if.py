@@ -1,4 +1,4 @@
-# The syntax of an "if"-statement in Python.
+"""The syntax of an "if"-statement in Python."""
 
 if booleanExpression:
     conditional statement 1  # Only executed if booleanExpression

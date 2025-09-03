@@ -1,4 +1,4 @@
-# The syntax of a inline "if-else"-statements in Python.
+"""The syntax of a inline "if-else"-statements in Python."""
 
 # If conditionForUsingValueA evaluates to True, then valueA will be
 # assigned to variable. Otherwise, valueB will be assigned to variable.

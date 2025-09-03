@@ -1,4 +1,4 @@
-# The syntax of an "if-elif-else"-statement in Python.
+"""The syntax of an "if-elif-else"-statement in Python."""
 
 if booleanExpression 1:
     conditional 1 statement 1  # Only executed if booleanExpression 1

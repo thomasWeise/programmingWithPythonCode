@@ -1,4 +1,4 @@
-# The syntax of with-blocks in Python.
+"""The syntax of with-blocks in Python."""
 
 # The 'expression' is some expression that usually acquires a resource
 # which must eventually be released.

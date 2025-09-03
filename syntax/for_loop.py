@@ -1,4 +1,4 @@
-# The syntax of a for-loop in Python.
+"""The syntax of a for-loop in Python."""
 
 for loopVariable in sequence:
     loop body statement 1  # The loop body is executed for every item

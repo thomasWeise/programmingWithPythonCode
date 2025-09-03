@@ -1,3 +1,5 @@
+"""Dictionary Comprehension in Python."""
+
 # Create a dictionary from all the item pairs in a sequence.
 # 'expression1' and 'expression2' are usually expressions whose results
 # depend on 'item'.

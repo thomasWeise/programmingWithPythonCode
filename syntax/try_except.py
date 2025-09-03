@@ -1,4 +1,4 @@
-# The syntax of a try-except statement in Python.
+"""The syntax of a try-except statement in Python."""
 
 try:  # Begin the try-except block.
     statement 1  # Code that may raise an exception or that

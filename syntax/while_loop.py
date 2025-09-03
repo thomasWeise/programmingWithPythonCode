@@ -1,4 +1,4 @@
-# The syntax of a while-loop in Python.
+"""The syntax of a while-loop in Python."""
 
 while booleanExpression:
     loop body statement 1  # The loop body is executed as long as the

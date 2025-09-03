@@ -1,4 +1,4 @@
-# The syntax of function definitions and function calls.
+"""The syntax of function definitions and function calls."""
 
 def my_function(param_1: type hint, param_2: type hint) -> result type:
     """

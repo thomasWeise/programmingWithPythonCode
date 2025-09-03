@@ -1,4 +1,4 @@
-# The syntax of a unary function always returning a constance value.
+"""The syntax of a unary function always returning a constance value."""
 def const_1(x: float) -> float:
     return 1.0   # always return 1.0, regardless of the value of x
 

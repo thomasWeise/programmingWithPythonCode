@@ -1,3 +1,5 @@
+"""Tuple Comprehension in Python."""
+
 # Create a generator from all the items in a sequence.
 # 'expression' is usually an expression whose result depends on 'item'.
 (expression for item in sequence)
