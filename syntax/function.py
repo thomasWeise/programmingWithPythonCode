@@ -1,6 +1,6 @@
 """The syntax of function definitions and function calls."""
 
-def my_function(param_1: type hint, param_2: type hint) -> result type:
+def my_function(param_1: type_hint, param_2: type_hint) -> result_type:
     """
     Short sentence describing the function.
 
