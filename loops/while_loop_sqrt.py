@@ -18,9 +18,8 @@ for number in [0.5, 2.0, 3.0]:  # The three numbers we want to test.
 
 
 # We use `while not isclose(old_guess, guess)` instead of
-# `while old_guess != guess`. The reason is that the latter is the same
-#  `while not (old_guess == guess)`. In other words, we would repeat the
-# loop until two floating point numbers become equal. That is very
-# dangerous and may, in some cases, lead to endless loops. (Not in case
+# `while old_guess != guess` to avoid a strict comparison of floats:
+# Looping until two floating point numbers become equal is very
+# dangerous. It  may, in some cases, lead to endless loops. (Not in case
 # of this algorithm, though, but let's be on the safe side and always
-# follow best practices!)
+# follow best practices.)
