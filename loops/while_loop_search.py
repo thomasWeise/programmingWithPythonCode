@@ -4,15 +4,15 @@ data: str = "abdfjlmoqsuvwyz"  # A string of sorted characters.
 
 for search in ["a", "c", "o", "p", "w", "z"]:  # Search six characters.
     # Perform binary search to find `search` in `data`.
-    upper: int = len(data)  # *Exclusive* upper index.
-    lower: int = 0          # Lowest possible index = 0 (inclusive).
-    while lower < upper:    # Repeat until lower >= upper.
+    upper: int = len(data)      # *Exclusive* upper index.
+    lower: int = 0              # Lowest possible index = 0 (inclusive).
+    while lower < upper:        # Repeat until lower >= upper.
         mid: int = (lower + upper) // 2  # Works ONLY in Python 3 :-).
         mid_str: str = data[mid]  # Get the character at index mid.
-        if mid_str < search:  # If mid_str < search, then clearly...
-            lower = mid + 1  # ...the index of search must be < mid.
+        if mid_str < search:    # If mid_str < search, then clearly...
+            lower = mid + 1     # ...the index of search must be < mid.
         elif mid_str > search:  # If mid_str > search, then clearly...
-            upper = mid  # ...the index of search must be > mid.
+            upper = mid         # ...the index of search must be > mid.
         else:  # If neither (mid_str < search) nor (mid_str > search)...
             print(f"Found {search!r} at index {mid} in {data!r}.")
             break  # Exit while loop and skip over while loop's else.
