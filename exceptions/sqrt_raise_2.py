@@ -13,7 +13,7 @@ def sqrt(number: float) -> float:
     :raises ArithmeticError: if `number` is not finite or less than 0.0
     :raises TypeError: if `number` is not a `float`
     """
-    if not isinstance(number, float):  # raise error
+    if not isinstance(number, float):  # raise error if type wrong
         raise TypeError("number must be float!")
     if (not isfinite(number)) or (number < 0.0):  # raise error
         raise ArithmeticError(f"sqrt({number}) is not permitted.")
