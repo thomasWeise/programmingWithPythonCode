@@ -10,7 +10,7 @@ def sqrt(number: float) -> float:
 
     :param number: The number to compute the square root of.
     :return: A value `v` such that `v * v == number`.
-    :raises ArithmeticError: if `number` is not finite or less than `0.0`
+    :raises ArithmeticError: if `number` is not finite or less than 0.0
     """
     if (not isfinite(number)) or (number < 0.0):  # raise error
         raise ArithmeticError(f"sqrt({number}) is not permitted.")
