@@ -16,5 +16,4 @@ finally:  # The optional finally block.
     statement 5  # This code will always be executed, even if there are
     statement 6  # uncaught exceptions.
 
-
 next statement  # Executed only if there are no uncaught Exceptions.
