@@ -21,13 +21,19 @@ def sqrt(number: float) -> float:
     return guess
 
 
-def test_sqrt_1() -> None:
-    """Test the `sqrt` variant that does not itself raise Exceptions."""
+def test_sqrt_raises_arithmetic_error_1():
+    """Check that `ArithmeticError` is properly raised..."""
     with raises(ArithmeticError):  # We can also test without `match`.
         sqrt(-1.0)  # This is not permitted, but no Exception is raised.
 
 
-def test_sqrt_2() -> None:
+def test_sqrt_raises_arithmetic_error_2():
     """Test the `sqrt` variant that does not itself raise Exceptions."""
+    with raises(OverflowError, match="int too large.*"):  # This works.
+        sqrt(10 ** 320)  # Raises OverflowError with right message.
+
+    with raises(ArithmeticError):  # ArithmeticError, any message
+        sqrt(10 ** 320)  # OverflowErrors are ArithmeticErrors -> OK.
+
     with raises(ArithmeticError, match="sqrt.* is not permitted."):
         sqrt(10 ** 320)  # OverflowErrors are ArithmeticErrors.
