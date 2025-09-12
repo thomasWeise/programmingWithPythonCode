@@ -7,10 +7,9 @@ from pytest import raises  # Needed checking that exceptions are raised.
 with raises(ExceptionType):
     code that should raise ExceptionType
 
-# We can provide a regular expression with parameter `match`.
-# If either no exception of type `ExceptionType` is raised
-#                   >>> OR <<<<
+# We can optionally provide a regular expression with parameter `match`.
+# If either no exception of type `ExceptionType` is raised  >>> OR <<<<
 # If the error message stored in the exception does not match to this
 # regex, then the test will fail.
 with raises(ExceptionType, match="error message regex"):
-    code that should raise ExceptionType  with error message
+    code that should raise ExceptionType with fitting error message
