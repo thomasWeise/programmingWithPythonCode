@@ -19,13 +19,13 @@ def test_sqrt() -> None:
 
 def test_sqrt_raises_arithmetic_error():
     """Check that `ArithmeticError` is properly raised."""
-    for v in [-1.0, inf, -inf, nan]:  # Either negative or not finite...
+    for number in [-1.0, inf, -inf, nan]:  # negative or not finite...
         with raises(ArithmeticError, match="sqrt.* is not permitted."):
-            sqrt(v)  # The square root of this v is not permitted.
+            sqrt(number)  # The square root of `number` is not defined.
 
 
 def test_sqrt_raises_type_error():
     """Check that `TypeError` is properly raised."""
-    for v in [True, "x", None]:  # all of these are NOT `float`s.
+    for number in [True, "x", None]:  # all of these are NOT `float`s.
         with raises(TypeError, match="number must be float!"):
-            sqrt(v)  # The square root of non-float v is not permitted.
+            sqrt(number)  # non-float values are not permitted.
