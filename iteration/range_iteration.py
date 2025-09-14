@@ -22,5 +22,3 @@ w = iter(x)              # Create an Iterator `w` over Iterable `x`.
 next(w)                  # Get first element in sequence `w`: `"0"`.
 next(v)                  # Get third element in sequence `v`: `"2"`.
 next(v)                  # `v` is exhausted, raises `StopIteration`.
-
-print("Done.")
