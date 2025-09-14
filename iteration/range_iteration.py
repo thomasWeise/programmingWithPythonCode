@@ -6,7 +6,7 @@ x = range(3)        # Create a range `x` with the numbers from 0 to 2.
 >>> for xi in x:    # We can loop over this range as often as we want.
 ...     print(f"Hello number {xi}!")
 
-from typing import Iterable, Iterator  # Import the two iteration types.
+from typing import Iterable, Iterator  # Import the two iteration types
 isinstance(x, Iterable)  # Check if `x` can be iterated over.
 u = iter(x)              # Create an Iterator `u` over Iterable `x`.
 isinstance(u, Iterator)  # Check if `u` really is an `Iterator`.

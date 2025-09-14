@@ -6,7 +6,7 @@ x = ["a", "b", "c"]       # Create a list `x` of three strings.
 >>> for xi in x:    # We can loop over this list as often as we want.
 ...     print(f"Hello letter {xi!r}!")
 
-from typing import Iterable, Iterator  # Import the two iteration types.
+from typing import Iterable, Iterator  # Import the two iteration types
 isinstance(x, Iterable)  # Check if `x` can be iterated over.
 u = iter(x)              # Create an Iterator `u` over Iterable `x`.
 isinstance(u, Iterator)  # Check if `u` really is an `Iterator`.
