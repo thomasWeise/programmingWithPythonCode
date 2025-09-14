@@ -22,3 +22,5 @@ w = iter(x)              # Create an Iterator `w` over Iterable `x`.
 next(w)                  # Get first element in sequence `w`: `"a"`.
 next(v)                  # Get third element in sequence `v`: `"c"`.
 next(v)                  # `v` is exhausted, raises `StopIteration`.
+
+print("Done.")
