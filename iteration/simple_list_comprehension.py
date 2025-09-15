@@ -9,8 +9,11 @@ print(f" result of construction: {squares_1}")  # Print the result.
 squares_2: list[int] = [j ** 2 for j in range(11)]
 print(f"result of comprehension: {squares_1}")  # Print the result.
 
+# A very simple example of how to use `if` in list comprehension.
 even_numbers: list[int] = [k for k in range(10) if k % 2 == 0]
 print(f"even numbers: {even_numbers}")
+# Of course, that we just an example, I know, I know, we can also...
+print(f"even numbers: {list(range(0, 10, 2))}")  #  ok, ok, yes...
 
 combinations: list[str] = [f"{m}{n}" for m in "abc" for n in "xy"]
 print(f"letter combinations: {combinations}")
