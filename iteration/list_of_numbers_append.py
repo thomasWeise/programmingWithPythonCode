@@ -20,4 +20,5 @@ def create_by_append() -> list[int]:
 # Obtain the minimum runtime of any execution as the lower bound of how
 # fast this code can run.
 time_in_s: float = min(repeat(create_by_append, number=1, repeat=50))
+print("==== iterative list construction via append ====")
 print(f"runtime/call: {1000 * time_in_s:.3} ms.")  # Print the result.
