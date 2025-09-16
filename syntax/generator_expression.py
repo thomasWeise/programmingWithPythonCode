@@ -1,4 +1,4 @@
-"""Tuple Comprehension in Python."""
+"""Generator Expressions in Python."""
 
 # Create a generator from all the items in a sequence.
 # 'expression' is usually an expression whose result depends on 'item'.
@@ -12,4 +12,4 @@
 
 # If generator expressions are single function parameters, then the
 # parentheses are unnecessary.
-function(expression for item in sequence if condition)
+my_func(expression for item in sequence if condition)
