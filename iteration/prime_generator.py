@@ -23,8 +23,8 @@ def primes() -> Generator[int, None, None]:
     yield 2  # The first and only even prime number.
 
     found: list[int] = []  # The list of already discovered primes.
-    candidate: int = 1  # The current prime candidate
-    while True:  # Loop over candidates.
+    candidate: int = 1     # The current prime candidate
+    while True:            # Loop over candidates.
         candidate += 2  # Move to the next odd number as prime candidate
         is_prime: bool = True  # Let us assume that `candidate` is prime
         limit: int = isqrt(candidate)  # Get maximum possible divisor.
