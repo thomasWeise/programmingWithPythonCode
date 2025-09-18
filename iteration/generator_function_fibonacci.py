@@ -1,12 +1,12 @@
-"""A simple example for generator functions."""
+"""A generator functions iterating over the Fibonacci Sequence."""
 
 from typing import Generator  # The type hint for generators.
 
 
 def fibonacci() -> Generator[int, None, None]:
     """A generator returning Fibonacci numbers."""
-    i: int = 0  # Initialize i.
-    j: int = 1  # Initialize j.
+    i: int = 0   # Initialize i.
+    j: int = 1   # Initialize j.
     while True:  # Loop forever, i.e., generator can continue forever.
         yield i  # Return the Fibonacci number.
         i, j = j, i + j  # i = old_j and j = old_i + old_j
