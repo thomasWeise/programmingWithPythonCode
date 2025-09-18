@@ -2,7 +2,6 @@
 
 from typing import Generator  # Import the generator type hint.
 
-
 def as_str(a: int) -> str:
     """
     A function with side effect printing `a` and returning it as `str`.
@@ -22,7 +21,6 @@ def as_str(a: int) -> str:
 lst: list[str] = [as_str(j) for j in range(3)]  # Prints 3 lines!
 print("list created")  # This text appears after the 3 lines.
 print(f"{next(iter(lst)) = }\n")  # This just prints '0'.
-
 # Generator invokes `as_str` only when required during iteration.
 gen: Generator[str, None, None] = (as_str(j) for j in range(3))
 print("generator created")  # Nothing new is printed until now.
