@@ -11,7 +11,7 @@ def as_str(a: int) -> str:
     :return: the output
 
     >>> as_str(5)
-    input is 5
+    as_str(5)
     '5'
     """
     print(f"as_str({a})", flush=True)  # Shows when function is called.
