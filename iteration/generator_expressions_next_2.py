@@ -14,7 +14,7 @@ def as_str(a: int) -> str:
     input is 5
     '5'
     """
-    print(f"input is {a}")  # Will show that generator is lazy-evaluated
+    print(f"as_str({a})", flush=True)  # Shows when function is called.
     return str(a)
 
 
