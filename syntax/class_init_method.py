@@ -3,7 +3,7 @@
 class MyClass:   # or `class MyClass(MyBaseClass)`
     """The docstring of the class."""
 
-    def __init__(self) -> None:  # Always annote with None.
+    def __init__(self, param1: type_hint) -> None:
         """The docstring of the initializer __init__."""
         # In this method, we initialize all the attributes of the class.
         # Each attribute should get an initial value, `None` if need be.
@@ -26,3 +26,8 @@ class MyClass:   # or `class MyClass(MyBaseClass)`
         self.my_other_method(12)  # Call other methods of the class.
 
     # ... more methods
+
+
+# Instantiating MyClass creates a new instance of MyClass.
+# We can use MyClass as type hint for variables.
+newVar: MyClass = MyClass(value for param1 of __init__)
