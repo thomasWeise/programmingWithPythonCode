@@ -21,5 +21,8 @@ class MyClass:   # or `class MyClass(MyBaseClass)`
         :returns: the documentation of the result of the method.
         """
         # compute something using the attributes
-        self.attribute_1 = ...   # Assign value to attribute.
-        x = self.attribute_1     # Use the value of an attribute.
+        self.attribute_1 = ...    # Assign value to attribute.
+        x = self.attribute_1      # Use the value of an attribute.
+        self.my_other_method(12)  # Call other methods of the class.
+
+    # ... more methods
