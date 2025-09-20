@@ -14,6 +14,7 @@ print(f"{isinstance(p2, Point) = }")  # Hence, this is True.
 
 print(f"{isinstance(5, Point) = }")   # This is obviously False
 
+print(f"{p1 is p1 = }")  # True, because p1 is the same as p1.
 print(f"{p1 is p2 = }")  # False, as these are two different instances.
 
 print(f"{p1.distance(p2) = }")  # sqrt(4² + 3²) = 5.0
