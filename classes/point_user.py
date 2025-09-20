@@ -2,17 +2,19 @@
 
 from point import Point
 
-p1: Point = Point(3, 5)  # Create a first point.
-print(f"{p1.x = }, {p1.y = }")  # p1.x = 3, p1.y = 5
-print(f"{isinstance(p1, Point) = }")  # True
+p1: Point = Point(3, 5)            # Create a first instance of Point.
+print(f"{p1.x = }, {p1.y = }")     # p1.x = 3, p1.y = 5
+print(f"{type(p1) = }")            # <class 'point.Point'>
+print(f"{isinstance(p1, Point) = }")  # Hence, this is True.
 
-p2: Point = Point(7, 8)  # Create a second point.
-print(f"{p2.x = }, {p2.y = }")  # p2.x = 7, p2.y = 8
-print(f"{isinstance(p2, Point) = }")  # True
+p2: Point = Point(7, 8)            # Create a second instance of Point.
+print(f"{p2.x = }, {p2.y = }")     # p2.x = 7, p2.y = 8
+print(f"{type(p2) = }")            # <class 'point.Point'>
+print(f"{isinstance(p2, Point) = }")  # Hence, this is True.
 
-print(f"{isinstance(5, Point) = }")  # False
+print(f"{isinstance(5, Point) = }")   # This is obviously False
 
-print(f"{p1 is p2 = }")  # False
+print(f"{p1 is p2 = }")  # False, as these are two different instances.
 
 print(f"{p1.distance(p2) = }")  # sqrt(4² + 3²) = 5.0
 print(f"{p2.distance(p1) = }")  # sqrt(4² + 3²) = 5.0
