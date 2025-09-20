@@ -7,7 +7,7 @@ print(f"{p1.x = }, {p1.y = }")     # p1.x = 3, p1.y = 5
 print(f"{type(p1) = }")            # <class 'point.Point'>
 print(f"{isinstance(p1, Point) = }")  # Hence, this is True.
 
-p2: Point = Point(7, 8)            # Create a second instance of Point.
+p2: Point = Point(x=7, y=8)        # Create a second instance of Point.
 print(f"{p2.x = }, {p2.y = }")     # p2.x = 7, p2.y = 8
 print(f"{type(p2) = }")            # <class 'point.Point'>
 print(f"{isinstance(p2, Point) = }")  # Hence, this is True.
