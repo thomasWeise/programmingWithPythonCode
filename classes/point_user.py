@@ -1,4 +1,4 @@
-"""Examples for using our class :class:`Point`."""
+"""Examples of using our class :class:`Point`."""
 
 from point import Point            # Import our class from its module.
 
