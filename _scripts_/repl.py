@@ -5,9 +5,12 @@ from code import InteractiveConsole
 from sys import argv, platform, stdout, version
 from typing import Final
 
-# The constants for new and continued statement prefixes.
+# The constants for new and continued statement prefixes, comments, etc.
 NEW_STATEMENT: Final[str] = ">>> "
 CONTINUED_STATEMENT: Final[str] = "... "
+COMMENT_START: Final[str] = "# "
+NEW_COMMENT: Final[str] = NEW_STATEMENT + COMMENT_START
+CONTINUED_COMMENT: Final[str] = CONTINUED_STATEMENT + COMMENT_START
 
 with redirect_stderr(stdout):  # Make sure to properly print exceptions.
     # Printing the python header
@@ -38,7 +41,13 @@ with redirect_stderr(stdout):  # Make sure to properly print exceptions.
 
     cur: list[str] = []  # the current list of statements
     for line in lines:  # we go over the lines to collect statements
-        if line.startswith(CONTINUED_STATEMENT):
+        if line.startswith(COMMENT_START):
+            print(line)  # print comments directly
+        elif line.startswith(NEW_COMMENT):  # catch indented comments
+            print(line[str.__len__(NEW_STATEMENT):])
+        elif line.startswith(CONTINUED_COMMENT):  # catch indented comments
+            print(line[str.__len__(CONTINUED_STATEMENT):])
+        elif line.startswith(CONTINUED_STATEMENT):
             print(line)  # continued statements are collected
             cur.append(line[str.__len__(CONTINUED_STATEMENT):])
         elif line.startswith(NEW_STATEMENT):
@@ -46,8 +55,6 @@ with redirect_stderr(stdout):  # Make sure to properly print exceptions.
                 run(cur)  # execute all collected statements
             print(line)  # print code line
             cur.append(line[str.__len__(NEW_STATEMENT):])
-        elif line.startswith("# ") and (list.__len__(cur) <= 0):
-            print(line)  # If line is comment and nothing cached, print it.
         elif str.__len__(line) > 0:  # no prefix: line is new command.
             if list.__len__(cur) > 0:
                 run(cur)  # execute all collected statements
