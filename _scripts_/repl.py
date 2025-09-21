@@ -46,7 +46,9 @@ with redirect_stderr(stdout):  # Make sure to properly print exceptions.
                 run(cur)  # execute all collected statements
             print(line)  # print code line
             cur.append(line[str.__len__(NEW_STATEMENT):])
-        elif str.__len__(line) > 0:  # wrong prefix, raise error.
+        elif line.startswith("# ") and (list.__len__(cur) <= 0):
+            print(line)  # If line is comment and nothing cached, print it.
+        elif str.__len__(line) > 0:  # no prefix: line is new command.
             if list.__len__(cur) > 0:
                 run(cur)  # execute all collected statements
             print(f"{NEW_STATEMENT}{line}")  # print code line
