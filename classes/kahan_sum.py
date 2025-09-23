@@ -4,9 +4,11 @@ The second-order Kahan-Babuška-Neumaier-Summation by Klein.
 [1] A. Klein. A Generalized Kahan-Babuška-Summation-Algorithm.
     Computing 76:279-293. 2006. doi:10.1007/s00607-005-0139-x
 
->>> sum([1e36, 1e18, 1, -1e36, -1e18])
-0.0
->>> KahanSum().add(1e36).add(1e18).add(1).add(-1e36).add(-1e18).result()
+>>> data = [1e36, 1e18, 1, -1e36, -1e18]
+>>> kahan_sum = KahanSum()
+>>> for xi in data:
+...     kahan_sum.add(xi)
+>>> kahan_sum.result()
 1.0
 """
 
@@ -23,12 +25,11 @@ class KahanSum:
         #: the second correction term, another internal variable
         self.__ccs: float | int = 0
 
-    def add(self, value: int | float) -> "KahanSum":
+    def add(self, value: int | float) -> None:
         """
         Add a value to the sum.
 
         :param value: the value to add
-        :returns: the sum itself
         """
         s: int | float = self.__sum  # Get the current running sum.
         t: int | float = s + value   # Compute the new sum value.
@@ -41,7 +42,6 @@ class KahanSum:
                            else ((c - t) + cs))  # 2nd Neumaier tweak.
         self.__cs = t  # Store the updated first-order correction term.
         self.__ccs += cc  # Update the second-order correction.
-        return self  # Return `self` so that we can chain calls.
 
     def result(self) -> int | float:
         """
