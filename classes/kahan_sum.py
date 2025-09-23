@@ -5,7 +5,7 @@ The second-order Kahan-Babuška-Neumaier-Summation by Klein.
     Computing 76:279-293. 2006. doi:10.1007/s00607-005-0139-x
 
 >>> kahan_sum = KahanSum()
->>> for xi in [1e36, 1e18, 1, -1e36, -1e18]:
+>>> for xi in [1e18, 1, 1e36, -1e36, -1e18]:
 ...     kahan_sum.add(xi)
 >>> kahan_sum.result()
 1.0
