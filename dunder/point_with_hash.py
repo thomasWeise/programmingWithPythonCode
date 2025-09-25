@@ -49,5 +49,7 @@ class Point:
 
         >>> hash(Point(4, 5))
         -1009709641759730766
+        >>> hash(Point(4.0, 5))
+        -1009709641759730766
         """
         return hash((self.x, self.y))  # hash over the tuple of values
