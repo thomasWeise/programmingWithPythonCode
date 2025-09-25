@@ -15,6 +15,7 @@ class Polygon(Shape):
         Get a :class:`Iterable` over the points describing this polygon.
 
         :return: the points describing the polygon
+        :raises NotImplementedError: Must be implemented by subclasses.
         """
         raise NotImplementedError  # must be implemented by subclasses
 
