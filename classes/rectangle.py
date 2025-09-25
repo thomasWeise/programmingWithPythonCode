@@ -12,7 +12,7 @@ from polygon import Polygon
 
 
 class Rectangle(Polygon):
-    """A rectangle is defined by its bottom-left and top-right corners."""
+    """A rectangle defined by its bottom-left and top-right corners."""
 
     def __init__(self, p1: Point, p2: Point) -> None:
         """
