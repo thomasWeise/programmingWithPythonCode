@@ -1,4 +1,4 @@
-"""A polygon is a figure described by points."""
+"""A polygon is a figure described by its corner points."""
 
 from typing import Iterable
 
@@ -25,15 +25,16 @@ class Polygon(Shape):
         :return: the perimeter of this polygon
         """
         previous: Point | None = None  # the previous point
-        first: Point | None = None  # the first point
-        total: KahanSum = KahanSum()  # the total perimeter length sum
+        first: Point | None = None     # the first point
+        total: KahanSum = KahanSum()   # the total perimeter length sum
         for current in self.points():  # Iterate over the points.
-            if previous is None:  # We got the first point.
+            if previous is None:      # We got the first point.
                 previous = first = current  # Remember it for last step.
             else:  # We now have previous != None, so we can add length.
                 total.add(previous.distance(current))  # Add length.
                 previous = current  # Current point becomes previous.
-        return total.add(previous.distance(first)).result()  # Add last.
+        total.add(previous.distance(first))  # distance back to start
+        return total.result()  # Return the perimeter.
 
     def print(self) -> None:
         """Print the points of this polygon."""
