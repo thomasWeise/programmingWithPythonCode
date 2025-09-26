@@ -43,7 +43,7 @@ class Point:
 
     def __hash__(self) -> int:
         """
-        Compute the hash of a :class:`Point`.
+        Compute the hash of a :class:`Point` based on its coordinates.
 
         :return: the hash code
 
