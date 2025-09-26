@@ -25,3 +25,4 @@ point_vals[Point(7, 9)] = "C"  # Put a new point/string-item in the dict
 print(f"{point_vals = }")      # Now there are three items.
 point_vals[Point(3.0, 5.0)] = "D"  # Change value associated with p1.
 print(f"{point_vals = }")      # There are still three items.
+print(point_vals[p1])          # Ths gives us 'D'.
