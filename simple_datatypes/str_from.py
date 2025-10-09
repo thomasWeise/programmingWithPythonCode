@@ -1,13 +1,15 @@
+# Here are some functions can be used to convert strings to other types.
+
 int("1111")        # Convert decimal number 1111 to int.
-int("0x1111", 16)  # Convert hexadecimal number 1111 to int.
-int("0b1111", 2)   # Convert binary number 1111 to int.
+int("0x1111", 16)  # Convert hexadecimal number (base 16) 1111 to int.
+int("0b1111", 2)   # Convert binary number 1111 (base 2) to int.
 
 float("2.233e4")   # fractional number in scientific notation and
 float("0.1123")    # normal fractional number converted to float
-float("inf")       # convert to float value inf
-float("nan")       # convert to float value not-a-number
+float("inf")       # "inf" is converted to the float value for infinity.
+float("nan")       # "nan" is converted to the float value not-a-number.
 
-# bool works differently!
+# ----> WARNING: The function `bool` works differently! <----
 # It performs a standard truth test, which returns `False` if its
 # argument is False, 0, and empty string or sequence, or None.
 # Otherwise, it returns True.
@@ -16,3 +18,7 @@ float("nan")       # convert to float value not-a-number
 bool("True")       # convert to the bool value True
 bool("False")      # convert to the bool value True!!
 bool("")           # convert to the bool value False
+
+# We now have learned how to use these functions with string parameters.
+# However, they also work with parameters of other types.
+# You can, for example, also do `float(1)` or `int(3.5)`.
