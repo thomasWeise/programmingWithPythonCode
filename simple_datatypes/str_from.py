@@ -18,6 +18,7 @@ float("nan")       # converted to the float value not-a-number
 bool("True")       # "True" is converted to the bool value True.
 bool("False")      # "False" is converted to the bool value True!!!
 bool("")           # The empty string is converts to False.
+bool("blabla")     # Actually, any non-empty string becomes True.
 
 # We now have learned how to use these functions with string parameters.
 # However, they also work with parameters of other types.
