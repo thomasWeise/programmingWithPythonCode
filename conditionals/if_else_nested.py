@@ -16,5 +16,5 @@ else:          # This means that b >= a.
         print(f"{c} is the greatest number.")
 
 # Some side information: The max and min function are very useful.
-print(f"The maximum is {max(a, b, c)}.")  # max: get maximum of a sequence
-print(f"The minimum is {min(a, b, c)}.")  # min: get minimum of a sequence
+print(f"The maximum is {max(a, b, c)}.")  # max: get the largest element
+print(f"The minimum is {min(a, b, c)}.")  # min: get te smallest element
