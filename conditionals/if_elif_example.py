@@ -1,7 +1,7 @@
 """An example of `elif` using human age groups."""
 
-age: int = 42  # the age of the person
-phase: str | None = None  # the life phase, to be computed
+age: int = 42             # the age of the person
+phase: str | None = None  # the life phase: to be computed
 
 if age <= 3:    # If the age is no more than 3 years...
     phase = "infancy"  # then the person is in their infancy.

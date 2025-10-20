@@ -8,5 +8,5 @@ variables `i` (for the index) and `v` (for the value).
 
 data: list[int] = [1, 2, 3, 5]  # The data to iterate over.
 
-for i, v in enumerate(data):  # Generate index-value pair sequence...
+for i, v in enumerate(data):    # Generate index-value pair sequence...
     print(f"data[{i}]={v}")

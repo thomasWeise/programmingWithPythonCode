@@ -17,9 +17,9 @@ for s in st:  # s takes on the values "u", "v", and "w" (unordered!).
 dc: dict[float, bool] = {1.1: True, 2.5: False}  # Create a dictionary.
 for k in dc:  # Iterate over the keys in the dictionary == 1.1 and 2.5.
     txt.append(f"{k = }")  # We store "k=1.1" and "k=2.5".
-for v in dc.values():  # Iterate over the values in the dictionary.
+for v in dc.values():      # Iterate over the values in the dictionary.
     txt.append(f"{v = }")  # We store "v=True" and "v=False".
-for k, v in dc.items():  # Iterate over the key-value combinations.
+for k, v in dc.items():    # Iterate over the key-value combinations.
     txt.append(f"{k}: {v}")  # Store "1.1: True" and "2.5: False"
 
 # Merge text into single string with separator ", " and print it.
