@@ -1,13 +1,14 @@
 """ An example of a function. """
 
-def compute(l: list[int]) -> list[int]:
+def compute(lst: list[int]) -> list[int]:
     """
-    Perform a computation with the list l.
-    :param l: the input list
+    Perform a computation with the list `lst`.
+
+    :param lst: the input list
     :return: the output list
     """
     result: list[int] = []
-    copy: list[int] = list(l)
+    copy: list[int] = list(lst)
 
     while len(copy) > 0:
         x: int = min(copy)
