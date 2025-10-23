@@ -5,7 +5,7 @@ def compute(number: int) -> int:
     Perform a computation with the number `number`.
 
     :param number: the input number
-    :return: the output num
+    :return: the output number
     """
     result: int = 0
     while result / number != number:
