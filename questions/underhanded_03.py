@@ -13,7 +13,7 @@ class Entry:
         :param value: the value string of the list element
         :param next: the next element in the list
         """
-        self.value = value
+        self.value: str = value
         self.next: "Entry | None" = next
 
 
