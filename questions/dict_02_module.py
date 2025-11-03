@@ -1,6 +1,6 @@
 """Lists: What output is produced by this program?"""
 
-def fill_dictionary() -> dict[int, str]:
+def create_dictionary() -> dict[int, str]:
     """
     Fill a dictionary with some values.
 
