@@ -1,4 +1,4 @@
-"""Lists: What output is produced by this program?"""
+"""Dictionaries: What output is produced by this program?"""
 
 from math import sqrt
 
