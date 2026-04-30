@@ -15,5 +15,5 @@ int(1e300)  # Only 16 zeros are effectively there in this float.
 # converted to a float, because:
 float(10 ** 400)
 
-# Not was the right-hand float converted to an int, because:
+# Nor was the right-hand float converted to an int, because:
 int(1e400)
