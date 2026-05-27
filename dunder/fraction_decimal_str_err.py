@@ -1,7 +1,6 @@
 """A new numerical type for fractions."""
 
 from math import gcd
-from types import NotImplementedType
 from typing import Final, Union
 
 

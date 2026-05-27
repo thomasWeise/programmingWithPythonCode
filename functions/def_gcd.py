@@ -1,6 +1,6 @@
 """Euclidian Algorithm for the Greatest Common Divisor as a function."""
 
-from math import gcd as math_gcd  # Use math's gcd under name `math_gcd`.
+from math import gcd as math_gcd  # Use math's gcd under name `math_gcd`
 
 
 def gcd(a: int, b: int) -> int:  # 2 `int` parameters and `int` result
