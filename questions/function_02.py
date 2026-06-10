@@ -14,6 +14,6 @@ def compute(number: int) -> int:
     return result
 
 
-print(compute(4))  # Line 16: What does it print?
-print(compute(7))  # Line 17: What does it print?
-print(compute(0))  # Line 18: What does it print?
+print(compute(4))  # Line 17: What does it print?
+print(compute(7))  # Line 18: What does it print?
+print(compute(0))  # Line 19: What does it print?

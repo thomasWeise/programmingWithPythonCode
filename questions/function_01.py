@@ -18,5 +18,5 @@ def compute(lst: list[int]) -> list[int]:
     return result
 
 
-print(compute([5, 4, 1, 3, 2]))      # Line 20: What does it print?
-print(compute([25, -34, 6, -5, 9]))  # Line 21: What does it print?
+print(compute([5, 4, 1, 3, 2]))      # Line 21: What does it print?
+print(compute([25, -34, 6, -5, 9]))  # Line 22: What does it print?
