@@ -4,7 +4,7 @@ from circle import Circle  # Our new class `Circle`.
 from point import Point    # Our very first class ever: `Point`.
 from shape import Shape    # Our base class `Shape`.
 
-circ: Circle = Circle(Point(2, 3), 5)  # Create a new circle instace.
+circ: Circle = Circle(Point(2, 3), 5)  # Create a new circle instance.
 print(f"                    center: ({circ.center.x}, {circ.center.y})")
 print(f"                    radius: {circ.radius}")
 print(f"                 perimeter: {circ.perimeter()}")
