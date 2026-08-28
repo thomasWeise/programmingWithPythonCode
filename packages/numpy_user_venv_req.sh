@@ -9,7 +9,7 @@ echo "# Any Python program now uses the activated virtual environment."
 source .venv/bin/activate
 
 echo "# Install the packages listed in 'requirements.txt' in the venv."
-pip install --require-virtualenv --progress-bar off -r requirements.txt
+pip install -q --require-virtualenv --progress-bar off -r requirements.txt
 
 echo "# 'numpy' is now available for Python programs."
 echo "$ python3 numpy_user.py"
