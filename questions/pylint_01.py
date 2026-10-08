@@ -1,4 +1,4 @@
-"""An example for using Pylint."""
+"""An example of using Pylint."""
 
 x: int = 56
 y: int = 4

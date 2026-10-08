@@ -1,4 +1,4 @@
-"""A simple example for generator functions."""
+"""A simple example of generator functions."""
 
 from typing import Generator  # The type hint for generators.
 

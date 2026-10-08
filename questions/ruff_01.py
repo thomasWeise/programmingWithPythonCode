@@ -1,4 +1,4 @@
-"""An example for using Ruff."""
+"""An example of using Ruff."""
 
 x: int = 56
 y: int = 4

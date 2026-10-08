@@ -1,4 +1,4 @@
-"""An example for using MyPy."""
+"""An example of using MyPy."""
 
 x: int = 56
 y: int = 4

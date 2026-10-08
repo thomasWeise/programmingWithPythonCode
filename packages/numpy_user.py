@@ -1,4 +1,4 @@
-"""An example for using numpy."""
+"""An example of using numpy."""
 
 import numpy as np
 
