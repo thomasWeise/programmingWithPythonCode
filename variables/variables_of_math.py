@@ -1,7 +1,8 @@
 # NEVER NEVER NEVER EVER DO THIS.
+# Python does not know constants. Hence, inf, nan, pi, e are variables.
 
 import math                  # Let's grab the math module.
-from math import sin
+from math import sin         # Import the sin function.
 
 print(math.pi)               # This prints 3.141592653589793
 print(sin(math.pi))          # 1.2246467991473532e-16, so basically 0.
