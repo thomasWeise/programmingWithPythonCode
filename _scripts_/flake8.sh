@@ -42,7 +42,7 @@ cd "$1"  # We enter the folder inside of which we should execute flake8.
 
 # Switch of "exit-on-error", run flake8, and afterwards switch it back on.
 set +o errexit  # Turn off exit-on-error.
-$command 2>&1
+$command 2>&1 | sed '/^[[:space:]]*$/d'  # Run flake8, clean output.
 exitCode="$?"  # Store exit code of program in variable exitCode.
 set -o errexit  # Turn exit-on-error back on.
 
