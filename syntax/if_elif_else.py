@@ -8,7 +8,7 @@ elif booleanExpression 2:  # such block can be placed arbitrarily often
     conditional 2 statement 1  # Only executed if booleanExpression 1
     conditional 2 statement 2  # evaluates to False and
     # ...                      # booleanExpression 2 evaluates to True.
-else:  # The else-paart is optional, can be left away.
+else:  # The else-part is optional, it can be omitted.
     alternative statement 1  # Only executed if booleanExpression 1 and
     alternative statement 2  # 2 both evaluate to False.
     # ...

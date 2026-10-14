@@ -7,8 +7,10 @@ from normal_pdf import pdf
 
 
 def integrate(
-        f: Callable[[float], float | int], a: int | float = 0.0,
-        b: int | float = 1.0, n: int = 100) -> float:
+        f: Callable[[float], float | int],
+        a: int | float = 0.0,
+        b: int | float = 1.0,
+        n: int = 100) -> float:
     """
     Integrate the function `f` between `a` and `b` using trapezoids.
 
