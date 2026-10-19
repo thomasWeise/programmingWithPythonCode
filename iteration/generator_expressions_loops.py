@@ -4,7 +4,7 @@ from math import sin
 from typing import Generator
 
 # The generator expression produces tuples of the form `(n, sin(n))`.
-gen: Generator[tuple[int, float], None, None] = (
+gen: Generator[tuple[int, float]] = (
     (n, sin(n)) for n in range(1_000_000_000))
 
 # The for loop iterates over the generator expression and unpacks the

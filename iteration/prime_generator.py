@@ -4,7 +4,7 @@ from math import isqrt  # The integer square root function.
 from typing import Generator  # The type hint for generators.
 
 
-def primes() -> Generator[int, None, None]:
+def primes() -> Generator[int]:
     """
     Provide a sequence of prime numbers.
 

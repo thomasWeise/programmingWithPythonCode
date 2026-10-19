@@ -3,7 +3,7 @@
 from typing import Generator  # The type hint for generators.
 
 
-def fibonacci() -> Generator[int, None, None]:
+def fibonacci() -> Generator[int]:
     """A generator returning Fibonacci numbers."""
     i: int = 0   # Initialize i.
     j: int = 1   # Initialize j.

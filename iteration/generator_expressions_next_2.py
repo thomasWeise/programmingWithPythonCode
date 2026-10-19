@@ -22,7 +22,7 @@ lst: list[str] = [as_str(j) for j in range(3)]  # Prints 3 lines!
 print("list created")  # This text appears after the 3 lines.
 print(f"{next(iter(lst)) = }\n")  # This just prints '0'.
 # Generator invokes `as_str` only when required during iteration.
-gen: Generator[str, None, None] = (as_str(j) for j in range(3))
+gen: Generator[str] = (as_str(j) for j in range(3))
 print("generator created")  # Nothing new is printed until now.
 print(f"{next(gen) = }")    # 2 prints: first in `as_str` and then `"0"`
 print(f"{next(gen) = }")    # 2 prints: first in `as_str` and then `"1"`

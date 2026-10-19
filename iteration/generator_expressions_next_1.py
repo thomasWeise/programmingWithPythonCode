@@ -3,7 +3,7 @@
 from typing import Generator, Iterator  # Import the types.
 
 # Create a generator expression of 1 billion square numbers.
-gen: Generator[int, None, None] = (i ** 2 for i in range(1_000_000_000))
+gen: Generator[int] = (i ** 2 for i in range(1_000_000_000))
 
 # If `gen` was a tuple, `print(gen)` would print the tuple contents.
 print(gen)  # However, the contents of gen are <generator object...>.
