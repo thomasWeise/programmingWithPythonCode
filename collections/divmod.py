@@ -11,3 +11,5 @@ print(f"{a = }, {b = }")
 print(f"{12 // 5 = }, {12 % 5 = }")
 a, b = divmod(12, 5)
 print(f"{a = }, {b = }")
+
+print(f"{type(divmod(100, 9)) = }")
