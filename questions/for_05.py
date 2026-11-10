@@ -1,4 +1,4 @@
-""" Print a rectangle of Xes and Os."""
+"""Print a rectangle of Xes and Os."""
 
 MAX: int = 7
 for i in range(MAX):

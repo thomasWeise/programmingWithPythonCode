@@ -1,4 +1,4 @@
-""" Print a rectangle of stars."""
+"""Print a rectangle of stars."""
 
 n = 5  # stars per row
 m = 3  # the number of rows
